@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>3DCamera: SampleMultiCamera.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">3DCamera
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li><a href="examples.html"><span>示例</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">SampleMultiCamera.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<p>这是搜索及连接多个相机的示例</p>
+<div class="fragment"><div class="line"><span class="comment">/*******************************************************************************</span></div>
+<div class="line"><span class="comment"> * This file is part of the 3D Camera API Sample</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * Copyright 2015-2020 (C) Chishine3D AS</span></div>
+<div class="line"><span class="comment"> * All rights reserved.</span></div>
+<div class="line"><span class="comment"> * </span></div>
+<div class="line"><span class="comment"> * Chishine3D Software License, v1.0</span></div>
+<div class="line"><span class="comment"> * </span></div>
+<div class="line"><span class="comment"> * Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><span class="comment"> * modification, are permitted provided that the following conditions are met:</span></div>
+<div class="line"><span class="comment"> * </span></div>
+<div class="line"><span class="comment"> * 1. Redistributions of source code must retain the above copyright notice,</span></div>
+<div class="line"><span class="comment"> * this list of conditions and the following disclaimer.</span></div>
+<div class="line"><span class="comment"> * </span></div>
+<div class="line"><span class="comment"> * 2. Redistributions in binary form must reproduce the above copyright notice,</span></div>
+<div class="line"><span class="comment"> * this list of conditions and the following disclaimer in the documentation</span></div>
+<div class="line"><span class="comment"> * and/or other materials provided with the distribution.</span></div>
+<div class="line"><span class="comment"> * </span></div>
+<div class="line"><span class="comment"> * 3. Neither the name of Chishine3D AS nor the names of its contributors may be used</span></div>
+<div class="line"><span class="comment"> * to endorse or promote products derived from this software without specific</span></div>
+<div class="line"><span class="comment"> * prior written permission.</span></div>
+<div class="line"><span class="comment"> * </span></div>
+<div class="line"><span class="comment"> * 4. This software, with or without modification, must not be used with any</span></div>
+<div class="line"><span class="comment"> * other 3D camera than from Chishine3D AS.</span></div>
+<div class="line"><span class="comment"> * </span></div>
+<div class="line"><span class="comment"> * 5. Any software provided in binary form under this license must not be</span></div>
+<div class="line"><span class="comment"> * reverse engineered, decompiled, modified and/or disassembled.</span></div>
+<div class="line"><span class="comment"> * </span></div>
+<div class="line"><span class="comment"> * THIS SOFTWARE IS PROVIDED BY CHISHINE3D AS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED</span></div>
+<div class="line"><span class="comment"> * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF</span></div>
+<div class="line"><span class="comment"> * MERCHANTABILITY, NONINFRINGEMENT, AND FITNESS FOR A PARTICULAR PURPOSE ARE</span></div>
+<div class="line"><span class="comment"> * DISCLAIMED. IN NO EVENT SHALL CHISHINE3D AS OR CONTRIBUTORS BE LIABLE FOR ANY</span></div>
+<div class="line"><span class="comment"> * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES</span></div>
+<div class="line"><span class="comment"> * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;</span></div>
+<div class="line"><span class="comment"> * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND</span></div>
+<div class="line"><span class="comment"> * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</span></div>
+<div class="line"><span class="comment"> * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS</span></div>
+<div class="line"><span class="comment"> * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><span class="comment"> *</span></div>
+<div class="line"><span class="comment"> * Contact: Chishine3D Support &lt;support@chishine3d.com&gt;</span></div>
+<div class="line"><span class="comment"> * Info:    http://www.chishine3d.com</span></div>
+<div class="line"><span class="comment"> ******************************************************************************/</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="3_d_camera_8hpp.html">3DCamera.hpp</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"></div>
+<div class="line">std::map&lt;std::string, cs::ICameraPtr&gt; g_cameraPtrs;</div>
+<div class="line">std::mutex g_mutex;</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> addDevice(<a name="_a0"></a><a class="code" href="_types_8hpp.html#struct_camera_info">CameraInfo</a> info)</div>
+<div class="line">{</div>
+<div class="line">    std::string serial_number = info.<a name="a1"></a><a class="code" href="_types_8hpp.html#a43de8a8f0342699ed6242bcf6f8c1666">serial</a>;</div>
+<div class="line">    std::lock_guard&lt;std::mutex&gt; lock(g_mutex);</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">if</span> (g_cameraPtrs.find(serial_number) != g_cameraPtrs.end())</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">return</span>; <span class="comment">//already in</span></div>
+<div class="line">    }</div>
+<div class="line">    </div>
+<div class="line">    <span class="keyword">auto</span> camera = <a name="a2"></a><a class="code" href="group___camera.html#ga24c8a4913384c5656c3ac466ed7715cf">cs::getCameraPtr</a>();</div>
+<div class="line">    <a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> error = camera-&gt;connect(info);</div>
+<div class="line">    <span class="keywordflow">if</span> (error != <a name="a3"></a><a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28cac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</a>)</div>
+<div class="line">    {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;connect failed\n&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">return</span>;</div>
+<div class="line">    }</div>
+<div class="line">    <a class="code" href="_types_8hpp.html#struct_camera_info">CameraInfo</a> connectedInfo;</div>
+<div class="line">    camera-&gt;getInfo(connectedInfo);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;Connected a new camera success\n&quot;</span>);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;%20s  :  %s\n&quot;</span>, <span class="stringliteral">&quot;name&quot;</span>, connectedInfo.<a name="a4"></a><a class="code" href="_types_8hpp.html#ac845ae2e86f535151eba5bdc85af1069">name</a>);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;%20s  :  %s\n&quot;</span>, <span class="stringliteral">&quot;serial&quot;</span>, connectedInfo.<a class="code" href="_types_8hpp.html#a43de8a8f0342699ed6242bcf6f8c1666">serial</a>);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;%20s  :  %s\n&quot;</span>, <span class="stringliteral">&quot;unique id&quot;</span>, connectedInfo.<a name="a5"></a><a class="code" href="_types_8hpp.html#a91d68a9baa09f6efab6b394ba03b7bd3">uniqueId</a>);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;%20s  :  %s\n&quot;</span>, <span class="stringliteral">&quot;firmware version&quot;</span>, connectedInfo.<a name="a6"></a><a class="code" href="_types_8hpp.html#a777c5c2d87dfa546614a1d0fb37870bb">firmwareVersion</a>);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;%20s  :  %s\n&quot;</span>, <span class="stringliteral">&quot;algorithm version&quot;</span>, connectedInfo.<a name="a7"></a><a class="code" href="_types_8hpp.html#aae30d65fc6c6782ee610c41fcb74b0a0">algorithmVersion</a>);</div>
+<div class="line">    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line">    <span class="comment">//start stream</span></div>
+<div class="line">    std::vector&lt;StreamInfo&gt; streamInfos;</div>
+<div class="line">    camera-&gt;getStreamInfos(<a name="a8"></a><a class="code" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492a253d79e6feb4d22784ac3f11d06e93dd">STREAM_TYPE_DEPTH</a>, streamInfos);</div>
+<div class="line">    <span class="keywordflow">for</span> (<span class="keyword">auto</span> streamInfo : streamInfos)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (streamInfo.format == <a name="a9"></a><a class="code" href="group___stream_format.html#gga5870b033d6c7f253318af8ca0bd716a8a15c092b9f52876bbadbc8a15ab61548e">STREAM_FORMAT_Z16</a>)</div>
+<div class="line">        {</div>
+<div class="line">            <span class="comment">//start stream</span></div>
+<div class="line">            <a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> ret = camera-&gt;startStream(<a class="code" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492a253d79e6feb4d22784ac3f11d06e93dd">STREAM_TYPE_DEPTH</a>, streamInfo);</div>
+<div class="line">            <span class="keywordflow">if</span> (ret != <a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28cac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</a>)</div>
+<div class="line">            {</div>
+<div class="line">                printf(<span class="stringliteral">&quot;camera start depth stream failed(%d)!\n&quot;</span>, ret);</div>
+<div class="line">                <span class="keywordflow">return</span>;</div>
+<div class="line">            }</div>
+<div class="line">            g_cameraPtrs.emplace(serial_number, camera);</div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> removeDevice(<a class="code" href="_types_8hpp.html#struct_camera_info">CameraInfo</a>&amp; info)</div>
+<div class="line">{</div>
+<div class="line">    std::lock_guard&lt;std::mutex&gt; lock(g_mutex);</div>
+<div class="line">    <span class="comment">// Go over the list of devices and check if it was disconnected</span></div>
+<div class="line">    <span class="keyword">auto</span> itr = g_cameraPtrs.begin();</div>
+<div class="line">    <span class="keywordflow">while</span> (itr != g_cameraPtrs.end())</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (info.<a class="code" href="_types_8hpp.html#a43de8a8f0342699ed6242bcf6f8c1666">serial</a> == itr-&gt;first)</div>
+<div class="line">        {</div>
+<div class="line">            itr = g_cameraPtrs.erase(itr);</div>
+<div class="line">        }</div>
+<div class="line">        <span class="keywordflow">else</span></div>
+<div class="line">        {</div>
+<div class="line">            ++itr;</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> cameraChangedCallback(std::vector&lt;CameraInfo&gt;&amp; added, std::vector&lt;CameraInfo&gt;&amp; removed, <span class="keywordtype">void</span> *user)</div>
+<div class="line">{</div>
+<div class="line">    printf(<span class="stringliteral">&quot;--------------camera list change callback start-------------------\n&quot;</span>);</div>
+<div class="line">    <span class="keywordflow">if</span> (removed.size())</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp;&amp; dev : removed)</div>
+<div class="line">        {</div>
+<div class="line">            printf(<span class="stringliteral">&quot;Camera pull out,serial number = %s\n\n&quot;</span>, dev.serial);</div>
+<div class="line">            removeDevice(dev);</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">if</span> (added.size())</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp;&amp; dev : added)</div>
+<div class="line">        {</div>
+<div class="line">            printf(<span class="stringliteral">&quot;Found a new camera,serial number = %s\n&quot;</span>, dev.serial);</div>
+<div class="line">            addDevice(dev);</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line">    printf(<span class="stringliteral">&quot;--------------camera list change callback end---------------------\n\n\n&quot;</span>);</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">    printf( <span class="stringliteral">&quot;This is SampleMultiCamera sample!\n\n&quot;</span>);</div>
+<div class="line">    <a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> ret;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// get system pointer</span></div>
+<div class="line">    <a class="code" href="group___system.html#ga7874ed2f545086034732b399aebc8a3e">cs::ISystemPtr</a> system = <a name="a10"></a><a class="code" href="group___system.html#gad8e6a85f062207202c20180948c0dd9d">cs::getSystemPtr</a>();</div>
+<div class="line">    </div>
+<div class="line">    std::vector&lt;CameraInfo&gt; cameras;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// query cameras and connect all cameras</span></div>
+<div class="line">    ret = system-&gt;queryCameras(cameras);</div>
+<div class="line">    <span class="keywordflow">if</span>(ret == <a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28cac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</a>)</div>
+<div class="line">    {</div>
+<div class="line">        printf(<span class="stringliteral">&quot;queryCameras found %ld cameras\n&quot;</span>, cameras.size());</div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; cameras.size(); i++)</div>
+<div class="line">        {</div>
+<div class="line">            printf(<span class="stringliteral">&quot;Connect to a camera,serial number = %s\n&quot;</span>, cameras[i].serial);</div>
+<div class="line">            addDevice(cameras[i]);</div>
+<div class="line">        }</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    system-&gt;setCameraChangeCallback(cameraChangedCallback, <span class="keyword">nullptr</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">//wait for camera list change callback</span></div>
+<div class="line">    <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
+<div class="line">    {</div>
+<div class="line">        </div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp;&amp; item : g_cameraPtrs)</div>
+<div class="line">        {</div>
+<div class="line">            std::lock_guard&lt;std::mutex&gt; lock(g_mutex);</div>
+<div class="line">            <span class="comment">// Ask each pipeline if there are new frames available</span></div>
+<div class="line">            <a class="code" href="group___frame.html#gaef9728e91022942cf396bbb7de90b619">cs::IFramePtr</a> frame;</div>
+<div class="line">            <span class="keywordflow">if</span> (<a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28cac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</a> == item.second-&gt;getFrame(<a class="code" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492a253d79e6feb4d22784ac3f11d06e93dd">STREAM_TYPE_DEPTH</a>, frame))</div>
+<div class="line">            {</div>
+<div class="line">                printf(<span class="stringliteral">&quot;%s Get one frame!\n&quot;</span>, item.first.c_str());</div>
+<div class="line">            }</div>
+<div class="line">            <span class="keywordflow">else</span></div>
+<div class="line">            {</div>
+<div class="line">                printf(<span class="stringliteral">&quot;%s Get frame fail!\n&quot;</span>, item.first.c_str());</div>
+<div class="line">            }</div>
+<div class="line">        }</div>
+<div class="line">        <span class="comment">//to do something</span></div>
+<div class="line">        std::this_thread::sleep_for(std::chrono::milliseconds(100));</div>
+<div class="line">    }</div>
+<div class="line">    </div>
+<div class="line">    <span class="keywordflow">return</span> 0;   </div>
+<div class="line">}</div>
+</div><!-- fragment --> </div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

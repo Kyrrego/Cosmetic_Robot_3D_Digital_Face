@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/robo/ur/ur_driver/catkin_ws/devel/setup.sh

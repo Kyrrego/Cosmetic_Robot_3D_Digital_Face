@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>3DCamera: 相机检测</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">3DCamera
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li><a href="examples.html"><span>示例</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">相机检测</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>发现相机、设置相机变动回调  
+<a href="#details">更多...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:classcs_1_1_i_system"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___system.html#classcs_1_1_i_system">cs::ISystem</a></td></tr>
+<tr class="memdesc:classcs_1_1_i_system"><td class="mdescLeft">&#160;</td><td class="mdescRight">系统接口  <a href="group___system.html#classcs_1_1_i_system">更多...</a><br /></td></tr>
+<tr class="separator:classcs_1_1_i_system"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ga763ebc268c516709d8ffca54d181c699"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___system.html#ga763ebc268c516709d8ffca54d181c699">cs::CameraChangeCallback</a>) (std::vector&lt; <a class="el" href="_types_8hpp.html#struct_camera_info">CameraInfo</a> &gt; &amp;addedCameras, std::vector&lt; <a class="el" href="_types_8hpp.html#struct_camera_info">CameraInfo</a> &gt; &amp;removedCameras, void *userData)</td></tr>
+<tr class="memdesc:ga763ebc268c516709d8ffca54d181c699"><td class="mdescLeft">&#160;</td><td class="mdescRight">camera state change callback  <a href="group___system.html#ga763ebc268c516709d8ffca54d181c699">更多...</a><br /></td></tr>
+<tr class="separator:ga763ebc268c516709d8ffca54d181c699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7874ed2f545086034732b399aebc8a3e"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; ISystem &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___system.html#ga7874ed2f545086034732b399aebc8a3e">cs::ISystemPtr</a></td></tr>
+<tr class="separator:ga7874ed2f545086034732b399aebc8a3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:gad8e6a85f062207202c20180948c0dd9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> std::shared_ptr&lt; ISystem &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___system.html#gad8e6a85f062207202c20180948c0dd9d">cs::getSystemPtr</a> ()</td></tr>
+<tr class="separator:gad8e6a85f062207202c20180948c0dd9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<p>发现相机、设置相机变动回调 </p>
+<hr/><h2 class="groupheader">类说明</h2>
+<a name="classcs_1_1_i_system" id="classcs_1_1_i_system"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">class cs::ISystem</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>系统接口 </p>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h3>Public 成员函数</h3></td></tr>
+<tr class="memitem:ab7018253f9e03a1991599b5df89d965e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___system.html#ab7018253f9e03a1991599b5df89d965e">~ISystem</a> ()</td></tr>
+<tr class="separator:ab7018253f9e03a1991599b5df89d965e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2482c37d0f63a55af68719c28597a13"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___system.html#af2482c37d0f63a55af68719c28597a13">queryCameras</a> (std::vector&lt; <a class="el" href="_types_8hpp.html#struct_camera_info">CameraInfo</a> &gt; &amp;cameras)=0</td></tr>
+<tr class="memdesc:af2482c37d0f63a55af68719c28597a13"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前可连接的相机列表  <a href="#af2482c37d0f63a55af68719c28597a13">更多...</a><br /></td></tr>
+<tr class="separator:af2482c37d0f63a55af68719c28597a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a597f755e744050d8d3dbdf36000214b3"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___system.html#a597f755e744050d8d3dbdf36000214b3">setCameraChangeCallback</a> (<a class="el" href="group___system.html#ga763ebc268c516709d8ffca54d181c699">CameraChangeCallback</a> callback, void *userData)=0</td></tr>
+<tr class="memdesc:a597f755e744050d8d3dbdf36000214b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置相机连接状态变动回调  <a href="#a597f755e744050d8d3dbdf36000214b3">更多...</a><br /></td></tr>
+<tr class="separator:a597f755e744050d8d3dbdf36000214b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">构造及析构函数说明</h4>
+<a class="anchor" id="ab7018253f9e03a1991599b5df89d965e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual cs::ISystem::~ISystem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h4 class="groupheader">成员函数说明</h4>
+<a class="anchor" id="af2482c37d0f63a55af68719c28597a13"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::ISystem::queryCameras </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="_types_8hpp.html#struct_camera_info">CameraInfo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cameras</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取当前可连接的相机列表 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">cameras</td><td>：返回有效相机列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a597f755e744050d8d3dbdf36000214b3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::ISystem::setCameraChangeCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___system.html#ga763ebc268c516709d8ffca54d181c699">CameraChangeCallback</a>&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>userData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置相机连接状态变动回调 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>：回调函数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">userData</td><td>：用户数据指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类型定义说明</h2>
+<a class="anchor" id="ga763ebc268c516709d8ffca54d181c699"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* cs::CameraChangeCallback) (std::vector&lt; <a class="el" href="_types_8hpp.html#struct_camera_info">CameraInfo</a> &gt; &amp;addedCameras, std::vector&lt; <a class="el" href="_types_8hpp.html#struct_camera_info">CameraInfo</a> &gt; &amp;removedCameras, void *userData)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_system_8hpp.html">hpp/System.hpp</a>&gt;</code></p>
+
+<p>camera state change callback </p>
+
+</div>
+</div>
+<a class="anchor" id="ga7874ed2f545086034732b399aebc8a3e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::shared_ptr&lt;ISystem&gt; <a class="el" href="group___system.html#ga7874ed2f545086034732b399aebc8a3e">cs::ISystemPtr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_system_8hpp.html">hpp/System.hpp</a>&gt;</code></p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="gad8e6a85f062207202c20180948c0dd9d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> std::shared_ptr&lt;ISystem&gt; cs::getSystemPtr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_system_8hpp.html">hpp/System.hpp</a>&gt;</code></p>
+<dl><dt><b>示例: </b></dt><dd><a class="el" href="_sample_multi_camera_8cpp-example.html#a10">SampleMultiCamera.cpp</a> , 以及 <a class="el" href="_sample_system_query_cameras_8cpp-example.html#a6">SampleSystemQueryCameras.cpp</a>.</dd>
+</dl>
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

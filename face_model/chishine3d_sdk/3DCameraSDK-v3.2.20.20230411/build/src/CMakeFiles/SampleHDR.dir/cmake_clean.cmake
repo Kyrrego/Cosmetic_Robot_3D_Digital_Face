@@ -1,0 +1,11 @@
+file(REMOVE_RECURSE
+  "/home/robo/cosmetic_robot/face_model/chishine3d_sdk/3DCameraSDK-v3.2.20.20230411/bin/SampleHDR"
+  "/home/robo/cosmetic_robot/face_model/chishine3d_sdk/3DCameraSDK-v3.2.20.20230411/bin/SampleHDR.pdb"
+  "CMakeFiles/SampleHDR.dir/SampleHDR/SampleHDR.cpp.o"
+  "CMakeFiles/SampleHDR.dir/SampleHDR/SampleHDR.cpp.o.d"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/SampleHDR.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

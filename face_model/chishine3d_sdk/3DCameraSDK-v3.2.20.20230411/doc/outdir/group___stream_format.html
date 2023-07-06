@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>3DCamera: 数据流格式</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">3DCamera
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li><a href="examples.html"><span>示例</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">枚举</a>  </div>
+  <div class="headertitle">
+<div class="title">数据流格式</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>深度流和RGB流所支持的所有格式  
+<a href="#details">更多...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga5870b033d6c7f253318af8ca0bd716a8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___stream_format.html#ga5870b033d6c7f253318af8ca0bd716a8">STREAM_FORMAT</a> { <br />
+&#160;&#160;<a class="el" href="group___stream_format.html#gga5870b033d6c7f253318af8ca0bd716a8a6383fc98fe0b27291fc1ac570d42f0c1">STREAM_FORMAT_MJPG</a> = 0x00, 
+<a class="el" href="group___stream_format.html#gga5870b033d6c7f253318af8ca0bd716a8a27ff8fad8a7e6b27cd547e4805de99ff">STREAM_FORMAT_RGB8</a> = 0x01, 
+<a class="el" href="group___stream_format.html#gga5870b033d6c7f253318af8ca0bd716a8a15c092b9f52876bbadbc8a15ab61548e">STREAM_FORMAT_Z16</a> = 0x02, 
+<a class="el" href="group___stream_format.html#gga5870b033d6c7f253318af8ca0bd716a8a4a2b6a034af85a217122a8b1e290ca5e">STREAM_FORMAT_Z16Y8Y8</a> = 0x03, 
+<br />
+&#160;&#160;<a class="el" href="group___stream_format.html#gga5870b033d6c7f253318af8ca0bd716a8abba4fb9496be00c0c616a4b208a9b47a">STREAM_FORMAT_PAIR</a> = 0x04, 
+<a class="el" href="group___stream_format.html#gga5870b033d6c7f253318af8ca0bd716a8a74ac0c327acf9d989dc14c1b75c8eeb7">STREAM_FORMAT_H264</a> = 0x05, 
+<a class="el" href="group___stream_format.html#gga5870b033d6c7f253318af8ca0bd716a8a75bf15efcae4ecfcada0c4f8735f7f86">STREAM_FORMAT_I8DS</a> = 0x100, 
+<a class="el" href="group___stream_format.html#gga5870b033d6c7f253318af8ca0bd716a8ab467b82e2b1f2cd5dc3a6cb8f5734f6b">STREAM_FORMAT_XZ32</a> = 0x101, 
+<br />
+&#160;&#160;<a class="el" href="group___stream_format.html#gga5870b033d6c7f253318af8ca0bd716a8a882ae45bf1221472a9da90b6e9629a82">STREAM_FORMAT_GRAY</a> = 0x102, 
+<a class="el" href="group___stream_format.html#gga5870b033d6c7f253318af8ca0bd716a8a681899509c2b3c3565a64b39fca3beed">STREAM_FORMAT_COUNT</a>
+<br />
+ }<tr class="separator:ga5870b033d6c7f253318af8ca0bd716a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+<tr class="memitem:ga106d0a961b2ad44efa33680009108e64"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___stream_format.html#ga106d0a961b2ad44efa33680009108e64">FRAME_DATA_FORMAT</a> { <br />
+&#160;&#160;<a class="el" href="group___stream_format.html#gga106d0a961b2ad44efa33680009108e64a74c2118d58fb31f76b23efe933ab2691">FRAME_DATA_FORMAT_Z16</a> = 0x00, 
+<a class="el" href="group___stream_format.html#gga106d0a961b2ad44efa33680009108e64a59ae3f295a162d4b634efeb6b2ce2208">FRAME_DATA_FORMAT_IR_LEFT</a> = 0x01, 
+<a class="el" href="group___stream_format.html#gga106d0a961b2ad44efa33680009108e64aa2c111996db07c7cedcb26586dd116d9">FRAME_DATA_FORMAT_IR_RIGHT</a> = 0x02, 
+<a class="el" href="group___stream_format.html#gga106d0a961b2ad44efa33680009108e64a976356274c122954bf3521c181b4c98d">FRAME_DATA_FORMAT_VCENTER_LEFT</a> = 0x03, 
+<br />
+&#160;&#160;<a class="el" href="group___stream_format.html#gga106d0a961b2ad44efa33680009108e64aa863fe2a17499c4b775c3bc9a8290e77">FRAME_DATA_FORMAT_VCENTER_RIGHT</a> = 0x04, 
+<a class="el" href="group___stream_format.html#gga106d0a961b2ad44efa33680009108e64a1d7d567d0c5361df8b10fd5456c40f09">FRAME_DATA_FORMAT_LASER_WIDTH_LEFT</a> = 0x05, 
+<a class="el" href="group___stream_format.html#gga106d0a961b2ad44efa33680009108e64aeaea1d64911f584de7d7862cdf6e5207">FRAME_DATA_FORMAT_LASER_WIDTH_RIGHT</a> = 0x06
+<br />
+ }<tr class="separator:ga106d0a961b2ad44efa33680009108e64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<p>深度流和RGB流所支持的所有格式 </p>
+<h2 class="groupheader">枚举类型说明</h2>
+<a class="anchor" id="ga5870b033d6c7f253318af8ca0bd716a8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___stream_format.html#ga5870b033d6c7f253318af8ca0bd716a8">STREAM_FORMAT</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_types_8hpp.html">hpp/Types.hpp</a>&gt;</code></p>
+<p>枚举: 流数据格式 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a class="anchor" id="gga5870b033d6c7f253318af8ca0bd716a8a6383fc98fe0b27291fc1ac570d42f0c1"></a>STREAM_FORMAT_MJPG&#160;</td><td class="fielddoc">
+<p>RGB流的MJPG压缩的数据 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga5870b033d6c7f253318af8ca0bd716a8a27ff8fad8a7e6b27cd547e4805de99ff"></a>STREAM_FORMAT_RGB8&#160;</td><td class="fielddoc">
+<p>RGB流的8位红,绿,蓝3通道数据 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga5870b033d6c7f253318af8ca0bd716a8a15c092b9f52876bbadbc8a15ab61548e"></a>STREAM_FORMAT_Z16&#160;</td><td class="fielddoc">
+<p>深度流的深度图格式, 每一个深度值以unsigned short表示 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga5870b033d6c7f253318af8ca0bd716a8a4a2b6a034af85a217122a8b1e290ca5e"></a>STREAM_FORMAT_Z16Y8Y8&#160;</td><td class="fielddoc">
+<p>深度流的深度图+红外图组合格式, 通过FRAME_DATA_FORMAT_Z16获得深度数据， 通过FRAME_DATA_FORMAT_IR_LEFT获得左红外图, 通过FRAME_DATA_FORMAT_IR_RIGHT获得右红外图 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga5870b033d6c7f253318af8ca0bd716a8abba4fb9496be00c0c616a4b208a9b47a"></a>STREAM_FORMAT_PAIR&#160;</td><td class="fielddoc">
+<p>深度流的红外图格式，适用于双目相机 通过FRAME_DATA_FORMAT_IR_LEFT获得左红外图, 通过FRAME_DATA_FORMAT_IR_RIGHT获得右红外图 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga5870b033d6c7f253318af8ca0bd716a8a74ac0c327acf9d989dc14c1b75c8eeb7"></a>STREAM_FORMAT_H264&#160;</td><td class="fielddoc">
+<p>RGB流的H264压缩的数据 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga5870b033d6c7f253318af8ca0bd716a8a75bf15efcae4ecfcada0c4f8735f7f86"></a>STREAM_FORMAT_I8DS&#160;</td><td class="fielddoc">
+<p>降采样红外预览格式 通过FRAME_DATA_FORMAT_IR_LEFT获得左红外图, 通过FRAME_DATA_FORMAT_IR_RIGHT获得右红外图， 通过FRAME_DATA_FORMAT_VCENTER_LEFT获得左红外图中光刀中心的y坐标数组, 通过FRAME_DATA_FORMAT_VCENTER_RIGHT获得右红外图中光刀中心的y坐标数组， 通过FRAME_DATA_FORMAT_LASER_WIDTH_LEFT 获得左红外图光刀宽度数组, 通过FRAME_DATA_FORMAT_LASER_WIDTH_RIGHT获得右红外图光刀宽度数组 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga5870b033d6c7f253318af8ca0bd716a8ab467b82e2b1f2cd5dc3a6cb8f5734f6b"></a>STREAM_FORMAT_XZ32&#160;</td><td class="fielddoc">
+<p>点云输出格式, 通过cs::Pointcloud::generatePointsFromXZ计算成点云 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga5870b033d6c7f253318af8ca0bd716a8a882ae45bf1221472a9da90b6e9629a82"></a>STREAM_FORMAT_GRAY&#160;</td><td class="fielddoc">
+<p>深度流的红外图格式，适用于单目相机 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga5870b033d6c7f253318af8ca0bd716a8a681899509c2b3c3565a64b39fca3beed"></a>STREAM_FORMAT_COUNT&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="ga106d0a961b2ad44efa33680009108e64"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___stream_format.html#ga106d0a961b2ad44efa33680009108e64">FRAME_DATA_FORMAT</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_types_8hpp.html">hpp/Types.hpp</a>&gt;</code></p>
+<p>枚举: 帧数据格式，用于获取复合流数据中的指定格式数据起始地址 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a class="anchor" id="gga106d0a961b2ad44efa33680009108e64a74c2118d58fb31f76b23efe933ab2691"></a>FRAME_DATA_FORMAT_Z16&#160;</td><td class="fielddoc">
+<p>深度流的深度图格式, 每一个深度值以unsigned short表示 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga106d0a961b2ad44efa33680009108e64a59ae3f295a162d4b634efeb6b2ce2208"></a>FRAME_DATA_FORMAT_IR_LEFT&#160;</td><td class="fielddoc">
+<p>左红外图数据， 8-bit unsigned char表示一个灰度值 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga106d0a961b2ad44efa33680009108e64aa2c111996db07c7cedcb26586dd116d9"></a>FRAME_DATA_FORMAT_IR_RIGHT&#160;</td><td class="fielddoc">
+<p>右红外图数据， unsigned char表示一个灰度值 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga106d0a961b2ad44efa33680009108e64a976356274c122954bf3521c181b4c98d"></a>FRAME_DATA_FORMAT_VCENTER_LEFT&#160;</td><td class="fielddoc">
+<p>左红外图光刀中心， unsigned char表示一个y坐标 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga106d0a961b2ad44efa33680009108e64aa863fe2a17499c4b775c3bc9a8290e77"></a>FRAME_DATA_FORMAT_VCENTER_RIGHT&#160;</td><td class="fielddoc">
+<p>右红外图光刀中心， unsigned char表示一个y坐标 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga106d0a961b2ad44efa33680009108e64a1d7d567d0c5361df8b10fd5456c40f09"></a>FRAME_DATA_FORMAT_LASER_WIDTH_LEFT&#160;</td><td class="fielddoc">
+<p>左红外图光刀宽度， unsigned char表示一个宽度值, 光刀太宽时影响点的精确度 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga106d0a961b2ad44efa33680009108e64aeaea1d64911f584de7d7862cdf6e5207"></a>FRAME_DATA_FORMAT_LASER_WIDTH_RIGHT&#160;</td><td class="fielddoc">
+<p>右红外图光刀宽度， unsigned char表示一个宽度值, 光刀太宽时影响点的精确度 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

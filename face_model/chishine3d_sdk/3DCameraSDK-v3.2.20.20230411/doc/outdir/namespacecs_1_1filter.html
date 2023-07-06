@@ -1,0 +1,381 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>3DCamera: cs::filter 命名空间参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">3DCamera
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li class="current"><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li><a href="examples.html"><span>示例</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="namespaces.html"><span>命名空间列表</span></a></li>
+      <li><a href="namespacemembers.html"><span>命名空间成员</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacecs.html">cs</a></li><li class="navelem"><a class="el" href="namespacecs_1_1filter.html">filter</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">cs::filter 命名空间参考<div class="ingroups"><a class="el" href="group___process.html">深度图后处理</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:a398ab3ef3d0b9d8ca1b3816af69c5319"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecs_1_1filter.html#a398ab3ef3d0b9d8ca1b3816af69c5319">FilterType</a> { <a class="el" href="namespacecs_1_1filter.html#a398ab3ef3d0b9d8ca1b3816af69c5319a240fdd8ec555ee8848ff01da87c2c120">FILTER_TYPE_AVERAGE</a> = 0x00, 
+<a class="el" href="namespacecs_1_1filter.html#a398ab3ef3d0b9d8ca1b3816af69c5319a012c80b7e85a7c76506b7d2f635d40b3">FILTER_TYPE_MEDIAN</a> = 0x01, 
+<a class="el" href="namespacecs_1_1filter.html#a398ab3ef3d0b9d8ca1b3816af69c5319a3831d252be05d0e09faa234d60846f44">FILTER_TYPE_GAUSSIAN</a> = 0x02
+ }<tr class="memdesc:a398ab3ef3d0b9d8ca1b3816af69c5319"><td class="mdescLeft">&#160;</td><td class="mdescRight">枚举: 滤波方式  <a href="namespacecs_1_1filter.html#a398ab3ef3d0b9d8ca1b3816af69c5319">更多...</a><br /></td></tr>
+<tr class="separator:a398ab3ef3d0b9d8ca1b3816af69c5319"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a74ef1cd51669ad4ab38f4db8f0bd88c2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecs_1_1filter.html#a74ef1cd51669ad4ab38f4db8f0bd88c2">generateGaussianKernel</a> (float *gaussianKernel, int filterSize, int sigma)</td></tr>
+<tr class="separator:a74ef1cd51669ad4ab38f4db8f0bd88c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4d4ca9b8ad16402954e0e0adac43a69"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecs_1_1filter.html#af4d4ca9b8ad16402954e0e0adac43a69">generateAverageKernel</a> (float *averageKernel, int filterSize)</td></tr>
+<tr class="separator:af4d4ca9b8ad16402954e0e0adac43a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a857557ebdabbaaff9ddead2d42f02fe4"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a857557ebdabbaaff9ddead2d42f02fe4"><td class="memTemplItemLeft" align="right" valign="top">static int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecs_1_1filter.html#a857557ebdabbaaff9ddead2d42f02fe4">GaussianBlur</a> (T *depthData, int width, int height, int filterSize, int sigma)</td></tr>
+<tr class="memdesc:a857557ebdabbaaff9ddead2d42f02fe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">高斯滤波  <a href="#a857557ebdabbaaff9ddead2d42f02fe4">更多...</a><br /></td></tr>
+<tr class="separator:a857557ebdabbaaff9ddead2d42f02fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0717504c8fcccbf41ddf24a54c2c39a0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a0717504c8fcccbf41ddf24a54c2c39a0"><td class="memTemplItemLeft" align="right" valign="top">static int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecs_1_1filter.html#a0717504c8fcccbf41ddf24a54c2c39a0">AverageBlur</a> (T *depthData, int width, int height, int filterSize)</td></tr>
+<tr class="memdesc:a0717504c8fcccbf41ddf24a54c2c39a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">均值滤波  <a href="#a0717504c8fcccbf41ddf24a54c2c39a0">更多...</a><br /></td></tr>
+<tr class="separator:a0717504c8fcccbf41ddf24a54c2c39a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bae714cedf7ad42a541e6ec5c3a2931"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a4bae714cedf7ad42a541e6ec5c3a2931"><td class="memTemplItemLeft" align="right" valign="top">static int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacecs_1_1filter.html#a4bae714cedf7ad42a541e6ec5c3a2931">MedianBlur</a> (T *depthData, int width, int height, int filterSize)</td></tr>
+<tr class="memdesc:a4bae714cedf7ad42a541e6ec5c3a2931"><td class="mdescLeft">&#160;</td><td class="mdescRight">中值滤波  <a href="#a4bae714cedf7ad42a541e6ec5c3a2931">更多...</a><br /></td></tr>
+<tr class="separator:a4bae714cedf7ad42a541e6ec5c3a2931"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">枚举类型说明</h2>
+<a class="anchor" id="a398ab3ef3d0b9d8ca1b3816af69c5319"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespacecs_1_1filter.html#a398ab3ef3d0b9d8ca1b3816af69c5319">cs::filter::FilterType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>枚举: 滤波方式 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a class="anchor" id="a398ab3ef3d0b9d8ca1b3816af69c5319a240fdd8ec555ee8848ff01da87c2c120"></a>FILTER_TYPE_AVERAGE&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a398ab3ef3d0b9d8ca1b3816af69c5319a012c80b7e85a7c76506b7d2f635d40b3"></a>FILTER_TYPE_MEDIAN&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a398ab3ef3d0b9d8ca1b3816af69c5319a3831d252be05d0e09faa234d60846f44"></a>FILTER_TYPE_GAUSSIAN&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="a74ef1cd51669ad4ab38f4db8f0bd88c2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void cs::filter::generateGaussianKernel </td>
+          <td>(</td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>gaussianKernel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>filterSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sigma</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af4d4ca9b8ad16402954e0e0adac43a69"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void cs::filter::generateAverageKernel </td>
+          <td>(</td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>averageKernel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>filterSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a857557ebdabbaaff9ddead2d42f02fe4"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int cs::filter::GaussianBlur </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>depthData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>filterSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sigma</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>高斯滤波 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">depthData</td><td>：深度数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>：图像宽度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>：图像高度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filterSize</td><td>：模板尺寸，必须为奇数，数值越大滤波程度越大 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sigma</td><td>：系数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0717504c8fcccbf41ddf24a54c2c39a0"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int cs::filter::AverageBlur </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>depthData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>filterSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>均值滤波 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">depthData</td><td>：深度数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>：图像宽度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>：图像高度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filterSize</td><td>：模板尺寸，必须为奇数，数值越大滤波程度越大 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4bae714cedf7ad42a541e6ec5c3a2931"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int cs::filter::MedianBlur </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>depthData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>filterSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>中值滤波 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">depthData</td><td>：深度数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>：图像宽度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>：图像高度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filterSize</td><td>：模板尺寸，必须为奇数，数值越大滤波程度越大 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

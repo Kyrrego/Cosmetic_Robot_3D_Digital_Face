@@ -1,0 +1,5 @@
+v2.4.0
+1. 新增SDK支持SufraceHD系列网络协议（Windows），固件版本为SurfaceHD 4.4.6.1123以上；
+2. 新增SDK支持SufraceHD系列网络协议（Linux），固件版本为SurfaceHD 4.4.6.1123以上；
+3. 修复Surface HD系列返回值错误的BUG；
+4. 修复Surface系列网口数据错误的BUG。

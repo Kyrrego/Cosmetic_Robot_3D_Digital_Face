@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>3DCamera: hpp/Frame.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">3DCamera
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li><a href="examples.html"><span>示例</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_2a1119d2a4e2dac6dfac4a03c074f009.html">hpp</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Frame.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_frame_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; <span class="comment">/*****************************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">*  3DCamera SDK header</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">*  @file     Frame.hpp</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">*  @brief    3DCamera sdk header</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">*  @version  1.0</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">*  @date     2019 / 08 / 17</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">*****************************************************************************/</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef __FRAME_HPP__</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define __FRAME_HPP__</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_types_8hpp.html">Types.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_a_p_i_export_8hpp.html">APIExport.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecs.html">cs</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">class </span>IFrame;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="group___frame.html#gaef9728e91022942cf396bbb7de90b619">   33</a></span>&#160;<span class="keyword">typedef</span> std::shared_ptr&lt;IFrame&gt; <a class="code" href="group___frame.html#gaef9728e91022942cf396bbb7de90b619">IFramePtr</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="group___frame.html">   41</a></span>&#160;<span class="keyword">class </span><a class="code" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="code" href="group___frame.html#classcs_1_1_i_frame">IFrame</a></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="group___frame.html#a98cf7f55efa0a76e32becbe9ff07825e">   45</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="group___frame.html#a98cf7f55efa0a76e32becbe9ff07825e">~IFrame</a>() {};</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">bool</span> empty() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">double</span> getTimeStamp() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *getData() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *getData(<a class="code" href="group___stream_format.html#ga106d0a961b2ad44efa33680009108e64">FRAME_DATA_FORMAT</a> format) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">int</span> getSize() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">int</span> getWidth() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">int</span> getHeight() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="group___stream_format.html#ga5870b033d6c7f253318af8ca0bd716a8">STREAM_FORMAT</a> getFormat() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_types_8hpp.html#union_extra_info">ExtraInfo</a>* getExtraInfo() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;};</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="namespacecs_html"><div class="ttname"><a href="namespacecs.html">cs</a></div><div class="ttdef"><b>Definition:</b> Camera.hpp:20</div></div>
+<div class="ttc" id="group___stream_format_html_ga5870b033d6c7f253318af8ca0bd716a8"><div class="ttname"><a href="group___stream_format.html#ga5870b033d6c7f253318af8ca0bd716a8">STREAM_FORMAT</a></div><div class="ttdeci">STREAM_FORMAT</div><div class="ttdef"><b>Definition:</b> Types.hpp:70</div></div>
+<div class="ttc" id="group___frame_html_gaef9728e91022942cf396bbb7de90b619"><div class="ttname"><a href="group___frame.html#gaef9728e91022942cf396bbb7de90b619">cs::IFramePtr</a></div><div class="ttdeci">std::shared_ptr&lt; IFrame &gt; IFramePtr</div><div class="ttdef"><b>Definition:</b> Frame.hpp:33</div></div>
+<div class="ttc" id="group___frame_html_a98cf7f55efa0a76e32becbe9ff07825e"><div class="ttname"><a href="group___frame.html#a98cf7f55efa0a76e32becbe9ff07825e">cs::IFrame::~IFrame</a></div><div class="ttdeci">virtual ~IFrame()</div><div class="ttdef"><b>Definition:</b> Frame.hpp:45</div></div>
+<div class="ttc" id="_types_8hpp_html"><div class="ttname"><a href="_types_8hpp.html">Types.hpp</a></div></div>
+<div class="ttc" id="group___stream_format_html_ga106d0a961b2ad44efa33680009108e64"><div class="ttname"><a href="group___stream_format.html#ga106d0a961b2ad44efa33680009108e64">FRAME_DATA_FORMAT</a></div><div class="ttdeci">FRAME_DATA_FORMAT</div><div class="ttdef"><b>Definition:</b> Types.hpp:121</div></div>
+<div class="ttc" id="_types_8hpp_html_union_extra_info"><div class="ttname"><a href="_types_8hpp.html#union_extra_info">ExtraInfo</a></div><div class="ttdoc">帧的附加数据 </div><div class="ttdef"><b>Definition:</b> Types.hpp:446</div></div>
+<div class="ttc" id="group___frame_html_classcs_1_1_i_frame"><div class="ttname"><a href="group___frame.html#classcs_1_1_i_frame">cs::IFrame</a></div><div class="ttdoc">数据帧接口 </div><div class="ttdef"><b>Definition:</b> Frame.hpp:41</div></div>
+<div class="ttc" id="_a_p_i_export_8hpp_html_a79ee95a817b27aef64bf9701994be113"><div class="ttname"><a href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a></div><div class="ttdeci">#define CS_API</div><div class="ttdef"><b>Definition:</b> APIExport.hpp:25</div></div>
+<div class="ttc" id="_a_p_i_export_8hpp_html"><div class="ttname"><a href="_a_p_i_export_8hpp.html">APIExport.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

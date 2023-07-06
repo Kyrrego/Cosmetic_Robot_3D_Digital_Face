@@ -1,0 +1,1470 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>3DCamera: 手眼标定</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">3DCamera
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li><a href="examples.html"><span>示例</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">手眼标定</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>提供手眼标定数据采集，参数计算，并使用标定结果将眼坐标系下的点或者向量转换到手的坐标系下  
+<a href="#details">更多...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:gaf10372b68ff31f1b48bf6ef08d4c73c9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___hand_eye.html#gaf10372b68ff31f1b48bf6ef08d4c73c9">cs::BASELINE_TYPE</a> { <a class="el" href="group___hand_eye.html#ggaf10372b68ff31f1b48bf6ef08d4c73c9ad1a2a1f6530e7acb89936db0c7e01548">cs::BASELINE_HORIZONTAL</a> = 0x00, 
+<a class="el" href="group___hand_eye.html#ggaf10372b68ff31f1b48bf6ef08d4c73c9add5dbcda32e92ed5399caf8a9bcd5b35">cs::BASELINE_VERTICAL</a> = 0x01
+ }<tr class="memdesc:gaf10372b68ff31f1b48bf6ef08d4c73c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">枚举: 基线方向，请参照例子设置  <a href="group___hand_eye.html#gaf10372b68ff31f1b48bf6ef08d4c73c9">更多...</a><br /></td></tr>
+<tr class="separator:gaf10372b68ff31f1b48bf6ef08d4c73c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:gae0d280905169cd33caffd2390ead974c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___hand_eye.html#gae0d280905169cd33caffd2390ead974c">cs::downloadCameraParams</a> (ICameraPtr camera, const char *cameraParamPath)</td></tr>
+<tr class="memdesc:gae0d280905169cd33caffd2390ead974c"><td class="mdescLeft">&#160;</td><td class="mdescRight">下载重建标定板用的相机参数，保存到指定目录  <a href="group___hand_eye.html#gae0d280905169cd33caffd2390ead974c">更多...</a><br /></td></tr>
+<tr class="separator:gae0d280905169cd33caffd2390ead974c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae681e89564720e033087f7e8f60c845f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___hand_eye.html#gae681e89564720e033087f7e8f60c845f">cs::reconstructChessboardPoints</a> (const char *cameraParamPath, const unsigned char *imageLeft, const unsigned char *imageRight, int width, int height, std::vector&lt; cs::Point3f &gt; &amp;points, std::vector&lt; cs::Point3f &gt; &amp;constraintPoints, int chessboardHorizontalPoints, int chessboardVerticalPoints, float chessboardGridSize, float &amp;error)</td></tr>
+<tr class="memdesc:gae681e89564720e033087f7e8f60c845f"><td class="mdescLeft">&#160;</td><td class="mdescRight">重建棋盘格标定板角点坐标  <a href="group___hand_eye.html#gae681e89564720e033087f7e8f60c845f">更多...</a><br /></td></tr>
+<tr class="separator:gae681e89564720e033087f7e8f60c845f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae0056dbc1dd44dce0d671c543e67fba3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___hand_eye.html#gae0056dbc1dd44dce0d671c543e67fba3">cs::reconstructCircleboardPoints</a> (const char *cameraParamPath, const unsigned char *imageLeft, const unsigned char *imageRight, int width, int height, std::vector&lt; cs::Point3f &gt; &amp;points, std::vector&lt; cs::Point3f &gt; &amp;constraintPoints, int boardHorizontalPoints, int boardVerticalPoints, float boardGridSize, float circleRadius, std::vector&lt; std::pair&lt; int, int &gt;&gt; bigCircleSetting, float &amp;error)</td></tr>
+<tr class="memdesc:gae0056dbc1dd44dce0d671c543e67fba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">重建圆点阵标定板的圆心坐标  <a href="group___hand_eye.html#gae0056dbc1dd44dce0d671c543e67fba3">更多...</a><br /></td></tr>
+<tr class="separator:gae0056dbc1dd44dce0d671c543e67fba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga66f90cca56d02daf2c0e3ffd41ef077f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___hand_eye.html#ga66f90cca56d02daf2c0e3ffd41ef077f">cs::reconstructChessboardPoints</a> (ICameraPtr camera, const unsigned char *imageLeft, const unsigned char *imageRight, int width, int height, std::vector&lt; cs::Point3f &gt; &amp;points, std::vector&lt; cs::Point3f &gt; &amp;constraintPoints, int boardHorizontalPoints, int boardVerticalPoints, float boardGridSize, float &amp;error)</td></tr>
+<tr class="memdesc:ga66f90cca56d02daf2c0e3ffd41ef077f"><td class="mdescLeft">&#160;</td><td class="mdescRight">重建棋盘格标定板角点坐标  <a href="group___hand_eye.html#ga66f90cca56d02daf2c0e3ffd41ef077f">更多...</a><br /></td></tr>
+<tr class="separator:ga66f90cca56d02daf2c0e3ffd41ef077f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga57a02ace53366c2a73881f5717414832"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___hand_eye.html#ga57a02ace53366c2a73881f5717414832">cs::reconstructCircleboardPoints</a> (ICameraPtr camera, const unsigned char *imageLeft, const unsigned char *imageRight, int width, int height, std::vector&lt; cs::Point3f &gt; &amp;points, std::vector&lt; cs::Point3f &gt; &amp;constraintPoints, int boardHorizontalPoints, int boardVerticalPoints, float boardGridSize, float circleRadius, std::vector&lt; std::pair&lt; int, int &gt;&gt; bigCircleSetting, float &amp;error)</td></tr>
+<tr class="memdesc:ga57a02ace53366c2a73881f5717414832"><td class="mdescLeft">&#160;</td><td class="mdescRight">重建圆点阵标定板的圆心坐标  <a href="group___hand_eye.html#ga57a02ace53366c2a73881f5717414832">更多...</a><br /></td></tr>
+<tr class="separator:ga57a02ace53366c2a73881f5717414832"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga018b1e9a633c6ada31fc5cea779f4e84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___hand_eye.html#ga018b1e9a633c6ada31fc5cea779f4e84">cs::calibrateEyeToHand</a> (std::vector&lt; HandEyeCalibrationInput &gt; &amp;input, HandEyeMatrix &amp;matrix, double *error=NULL)</td></tr>
+<tr class="memdesc:ga018b1e9a633c6ada31fc5cea779f4e84"><td class="mdescLeft">&#160;</td><td class="mdescRight">相机安装在机器人外部时计算旋转平移矩阵  <a href="group___hand_eye.html#ga018b1e9a633c6ada31fc5cea779f4e84">更多...</a><br /></td></tr>
+<tr class="separator:ga018b1e9a633c6ada31fc5cea779f4e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3b7dd3b2cd1f676921c49671a67d3ae6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___hand_eye.html#ga3b7dd3b2cd1f676921c49671a67d3ae6">cs::calibrateEyeInHand</a> (std::vector&lt; HandEyeCalibrationInput &gt; &amp;input, HandEyeMatrix &amp;matrix, double *error=NULL)</td></tr>
+<tr class="memdesc:ga3b7dd3b2cd1f676921c49671a67d3ae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">相机固定在机器人上时计算旋转平移矩阵（不需要触碰特征点）  <a href="group___hand_eye.html#ga3b7dd3b2cd1f676921c49671a67d3ae6">更多...</a><br /></td></tr>
+<tr class="separator:ga3b7dd3b2cd1f676921c49671a67d3ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad22f528c2043945736184a5ff0a60d7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___hand_eye.html#gad22f528c2043945736184a5ff0a60d7b">cs::calibrateEyeInHandWithChessboardConstraintPoints</a> (std::vector&lt; HandEyeCalibrationInput &gt; &amp;input, std::vector&lt; cs::Point3f &gt; &amp;constraintPoints, HandEyeMatrix &amp;matrix, double *error=NULL)</td></tr>
+<tr class="memdesc:gad22f528c2043945736184a5ff0a60d7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用棋盘格标定板，相机固定在机器人上时计算旋转平移矩阵（需要触碰四个角的角点）  <a href="group___hand_eye.html#gad22f528c2043945736184a5ff0a60d7b">更多...</a><br /></td></tr>
+<tr class="separator:gad22f528c2043945736184a5ff0a60d7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0242a61c31f27fd712db2889049a0a74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___hand_eye.html#ga0242a61c31f27fd712db2889049a0a74">cs::calibrateEyeInHandWithCircleboardConstraintPoints</a> (std::vector&lt; HandEyeCalibrationInput &gt; &amp;inputs, std::vector&lt; cs::Point3f &gt; &amp;constraintPoints, int boardHorizontalPoints, int boardVerticalPoints, float boardGridSize, HandEyeMatrix &amp;matrix, double *error)</td></tr>
+<tr class="memdesc:ga0242a61c31f27fd712db2889049a0a74"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用圆点阵标定板，相机固定在机器人上时计算旋转平移矩阵（需要触碰四个十字特征点）  <a href="group___hand_eye.html#ga0242a61c31f27fd712db2889049a0a74">更多...</a><br /></td></tr>
+<tr class="separator:ga0242a61c31f27fd712db2889049a0a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga55d40fe53dd38fd83cc7c64f8c22ed20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___hand_eye.html#ga55d40fe53dd38fd83cc7c64f8c22ed20">cs::transformPointFromEyeToHand</a> (RobotPoseMatrix4f pose, <a class="el" href="_hand_eye_input_8hpp.html#struct_point3f">Point3f</a> inputPoint, HandEyeMatrix matrix, <a class="el" href="_hand_eye_input_8hpp.html#struct_point3f">Point3f</a> &amp;outPoint)</td></tr>
+<tr class="memdesc:ga55d40fe53dd38fd83cc7c64f8c22ed20"><td class="mdescLeft">&#160;</td><td class="mdescRight">将相机坐标系下的点转到机器人坐标系  <a href="group___hand_eye.html#ga55d40fe53dd38fd83cc7c64f8c22ed20">更多...</a><br /></td></tr>
+<tr class="separator:ga55d40fe53dd38fd83cc7c64f8c22ed20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacc56898574201fb9828f1672378982af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___hand_eye.html#gacc56898574201fb9828f1672378982af">cs::transformVectorFromEyeToHand</a> (RobotPoseMatrix4f pose, <a class="el" href="_hand_eye_input_8hpp.html#struct_vector3f">Vector3f</a> inputVector, HandEyeMatrix matrix, <a class="el" href="_hand_eye_input_8hpp.html#struct_vector3f">Vector3f</a> &amp;outVector)</td></tr>
+<tr class="memdesc:gacc56898574201fb9828f1672378982af"><td class="mdescLeft">&#160;</td><td class="mdescRight">将相机坐标系下的向量转到机器人坐标系  <a href="group___hand_eye.html#gacc56898574201fb9828f1672378982af">更多...</a><br /></td></tr>
+<tr class="separator:gacc56898574201fb9828f1672378982af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac10efe2b666bd67a39bfd97bf1eb8f05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___hand_eye.html#gac10efe2b666bd67a39bfd97bf1eb8f05">cs::transformPoseFromEyeToHand</a> (RobotPoseMatrix4f toolPose, RobotPoseMatrix4f poseInEye, HandEyeMatrix matrix, RobotPoseType poseType, RobotPoseUnit poseUnit, <a class="el" href="_hand_eye_input_8hpp.html#struct_robot_pose">RobotPose</a> &amp;outPoseInHand)</td></tr>
+<tr class="memdesc:gac10efe2b666bd67a39bfd97bf1eb8f05"><td class="mdescLeft">&#160;</td><td class="mdescRight">将相机坐标系下的位姿转到机器人坐标系  <a href="group___hand_eye.html#gac10efe2b666bd67a39bfd97bf1eb8f05">更多...</a><br /></td></tr>
+<tr class="separator:gac10efe2b666bd67a39bfd97bf1eb8f05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8d9ba7c4624912a0852be512aee860a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___hand_eye.html#ga8d9ba7c4624912a0852be512aee860a5">cs::transformPoseFromEyeToHand</a> (RobotPoseMatrix4f toolPose, RobotPoseMatrix4f poseInEye, HandEyeMatrix matrix, RobotPoseMatrix4f outMatrixInHand)</td></tr>
+<tr class="memdesc:ga8d9ba7c4624912a0852be512aee860a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">将相机坐标系下的位姿转到机器人坐标系  <a href="group___hand_eye.html#ga8d9ba7c4624912a0852be512aee860a5">更多...</a><br /></td></tr>
+<tr class="separator:ga8d9ba7c4624912a0852be512aee860a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ab9442d62c16d6d6f2d18d7cc583804"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___hand_eye.html#ga1ab9442d62c16d6d6f2d18d7cc583804">cs::transformPointFromHandToEye</a> (<a class="el" href="classcs_1_1_robot_pose_matrix4f.html">cs::RobotPoseMatrix4f</a> pose, cs::Point3f inputPoint, <a class="el" href="classcs_1_1_hand_eye_matrix.html">cs::HandEyeMatrix</a> matrix, cs::Point3f &amp;outPoint)</td></tr>
+<tr class="memdesc:ga1ab9442d62c16d6d6f2d18d7cc583804"><td class="mdescLeft">&#160;</td><td class="mdescRight">将机器人坐标系下的点转到相机坐标系  <a href="group___hand_eye.html#ga1ab9442d62c16d6d6f2d18d7cc583804">更多...</a><br /></td></tr>
+<tr class="separator:ga1ab9442d62c16d6d6f2d18d7cc583804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab244effbf13453d0aa9cfd4c6dd26a17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___hand_eye.html#gab244effbf13453d0aa9cfd4c6dd26a17">cs::transformVectorFromHandToEye</a> (<a class="el" href="classcs_1_1_robot_pose_matrix4f.html">cs::RobotPoseMatrix4f</a> pose, cs::Vector3f inputVector, <a class="el" href="classcs_1_1_hand_eye_matrix.html">cs::HandEyeMatrix</a> matrix, cs::Vector3f &amp;outVector)</td></tr>
+<tr class="memdesc:gab244effbf13453d0aa9cfd4c6dd26a17"><td class="mdescLeft">&#160;</td><td class="mdescRight">将机器人坐标系下的向量转到相机坐标系  <a href="group___hand_eye.html#gab244effbf13453d0aa9cfd4c6dd26a17">更多...</a><br /></td></tr>
+<tr class="separator:gab244effbf13453d0aa9cfd4c6dd26a17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaec445758637819d988b8356ae108c598"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___hand_eye.html#gaec445758637819d988b8356ae108c598">cs::reconstructPoints</a> (ICameraPtr camera, std::vector&lt; <a class="el" href="_hand_eye_input_8hpp.html#struct_point2f">Point2f</a> &gt; leftPoints, std::vector&lt; <a class="el" href="_hand_eye_input_8hpp.html#struct_point2f">Point2f</a> &gt; rightPoints, std::vector&lt; <a class="el" href="_hand_eye_input_8hpp.html#struct_point3f">Point3f</a> &gt; &amp;points, BASELINE_TYPE type=BASELINE_HORIZONTAL)</td></tr>
+<tr class="memdesc:gaec445758637819d988b8356ae108c598"><td class="mdescLeft">&#160;</td><td class="mdescRight">通过左右相机图片中提取的特征点坐标计算到三维点坐标  <a href="group___hand_eye.html#gaec445758637819d988b8356ae108c598">更多...</a><br /></td></tr>
+<tr class="separator:gaec445758637819d988b8356ae108c598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3b24c0cc49819e29024dc88fc32c5d3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___hand_eye.html#ga3b24c0cc49819e29024dc88fc32c5d3a">cs::reconstructChessboardPoints</a> (ICameraPtr camera, IFramePtr pairFrame, std::vector&lt; <a class="el" href="_hand_eye_input_8hpp.html#struct_point3f">Point3f</a> &gt; &amp;points, int chessboardHorizontalPoints=9, int chessboardVerticalPoints=6, BASELINE_TYPE type=BASELINE_HORIZONTAL)</td></tr>
+<tr class="memdesc:ga3b24c0cc49819e29024dc88fc32c5d3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">重建标定板坐标  <a href="group___hand_eye.html#ga3b24c0cc49819e29024dc88fc32c5d3a">更多...</a><br /></td></tr>
+<tr class="separator:ga3b24c0cc49819e29024dc88fc32c5d3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2883090dcd8c6ec6e0af42adc79b63a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___hand_eye.html#ga2883090dcd8c6ec6e0af42adc79b63a9">cs::reconstructChessboardPoints</a> (ICameraPtr camera, const unsigned char *imageLeft, const unsigned char *imageRight, int width, int height, std::vector&lt; cs::Point3f &gt; &amp;points, int chessboardHorizontalPoints=9, int chessboardVerticalPoints=6, BASELINE_TYPE type=BASELINE_HORIZONTAL)</td></tr>
+<tr class="memdesc:ga2883090dcd8c6ec6e0af42adc79b63a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">重建标定板坐标  <a href="group___hand_eye.html#ga2883090dcd8c6ec6e0af42adc79b63a9">更多...</a><br /></td></tr>
+<tr class="separator:ga2883090dcd8c6ec6e0af42adc79b63a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa74ef17cc7fdd81d2aa66c7e2ecdc1f5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___hand_eye.html#gaa74ef17cc7fdd81d2aa66c7e2ecdc1f5">cs::RobotPoseType</a> { <br />
+&#160;&#160;<a class="el" href="group___hand_eye.html#ggaa74ef17cc7fdd81d2aa66c7e2ecdc1f5a421d0f8482eecf30002df9bbbc70dcde">cs::POSE_TYPE_EULER_ZYZ</a> = 0, 
+<a class="el" href="group___hand_eye.html#ggaa74ef17cc7fdd81d2aa66c7e2ecdc1f5acf6309d1775a9e5bd4a08569eb4807c9">cs::POSE_TYPE_EULER_XYZ</a> = 1, 
+<a class="el" href="group___hand_eye.html#ggaa74ef17cc7fdd81d2aa66c7e2ecdc1f5abb4f0e53bb87a89a2f902be3eb992961">cs::POSE_TYPE_EULER_ZYX</a> = 2, 
+<a class="el" href="group___hand_eye.html#ggaa74ef17cc7fdd81d2aa66c7e2ecdc1f5a67ac27e2f54014de3c388b36b80c0f38">cs::POSE_TYPE_RPY</a> = 3, 
+<br />
+&#160;&#160;<a class="el" href="group___hand_eye.html#ggaa74ef17cc7fdd81d2aa66c7e2ecdc1f5a3efe381cc0466243318fc9e380243623">cs::POSE_TYPE_QUATERNION</a> = 4, 
+<a class="el" href="group___hand_eye.html#ggaa74ef17cc7fdd81d2aa66c7e2ecdc1f5a41c25510f6b329ea5a7b3434985c277d">cs::POSE_TYPE_XYZAB</a> = 5, 
+<a class="el" href="group___hand_eye.html#ggaa74ef17cc7fdd81d2aa66c7e2ecdc1f5a2d78f2b864e88443ffcff60ea7e72fd0">cs::POSE_TYPE_ROTATE_VECTOR</a> = 6, 
+<a class="el" href="group___hand_eye.html#ggaa74ef17cc7fdd81d2aa66c7e2ecdc1f5aa7df48ebc856a23dd95392d93a2417c4">cs::POSE_TYPE_EULER_ZXZ</a> = 7, 
+<br />
+&#160;&#160;<a class="el" href="group___hand_eye.html#ggaa74ef17cc7fdd81d2aa66c7e2ecdc1f5af5d07785382a39c32d268aa25fa87893">cs::POSE_TYPE_EULER_ZYX_PANASONIC</a> = 8
+<br />
+ }<tr class="memdesc:gaa74ef17cc7fdd81d2aa66c7e2ecdc1f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">枚举: 当前位姿方向的表示方法  <a href="group___hand_eye.html#gaa74ef17cc7fdd81d2aa66c7e2ecdc1f5">更多...</a><br /></td></tr>
+<tr class="separator:gaa74ef17cc7fdd81d2aa66c7e2ecdc1f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+<tr class="memitem:ga4a0805248cb708a727a330a64b36ec44"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___hand_eye.html#ga4a0805248cb708a727a330a64b36ec44">cs::RobotPoseUnit</a> { <a class="el" href="group___hand_eye.html#ga4a0805248cb708a727a330a64b36ec44a1807849f57c33e85c4592814d11a026c">cs::POSE_UNIT_RADIAN</a> = 0, 
+<a class="el" href="group___hand_eye.html#ga4a0805248cb708a727a330a64b36ec44aa13fc4642aaa8af25900732a711bd02e">cs::POSE_UNIT_DEGREE</a>
+ }<tr class="memdesc:ga4a0805248cb708a727a330a64b36ec44"><td class="mdescLeft">&#160;</td><td class="mdescRight">枚举: 当前位姿方向的表示单位  <a href="group___hand_eye.html#ga4a0805248cb708a727a330a64b36ec44">更多...</a><br /></td></tr>
+<tr class="separator:ga4a0805248cb708a727a330a64b36ec44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<p>提供手眼标定数据采集，参数计算，并使用标定结果将眼坐标系下的点或者向量转换到手的坐标系下 </p>
+<h2 class="groupheader">枚举类型说明</h2>
+<a class="anchor" id="gaf10372b68ff31f1b48bf6ef08d4c73c9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___hand_eye.html#gaf10372b68ff31f1b48bf6ef08d4c73c9">cs::BASELINE_TYPE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_hand_eye_8hpp.html">hpp/HandEye/HandEye.hpp</a>&gt;</code></p>
+
+<p>枚举: 基线方向，请参照例子设置 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a class="anchor" id="ggaf10372b68ff31f1b48bf6ef08d4c73c9ad1a2a1f6530e7acb89936db0c7e01548"></a>BASELINE_HORIZONTAL&#160;</td><td class="fielddoc">
+<p>水平基线 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggaf10372b68ff31f1b48bf6ef08d4c73c9add5dbcda32e92ed5399caf8a9bcd5b35"></a>BASELINE_VERTICAL&#160;</td><td class="fielddoc">
+<p>垂直基线 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="gaa74ef17cc7fdd81d2aa66c7e2ecdc1f5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___hand_eye.html#gaa74ef17cc7fdd81d2aa66c7e2ecdc1f5">cs::RobotPoseType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_hand_eye_input_8hpp.html">hpp/HandEye/HandEyeInput.hpp</a>&gt;</code></p>
+
+<p>枚举: 当前位姿方向的表示方法 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a class="anchor" id="ggaa74ef17cc7fdd81d2aa66c7e2ecdc1f5a421d0f8482eecf30002df9bbbc70dcde"></a>POSE_TYPE_EULER_ZYZ&#160;</td><td class="fielddoc">
+<p>欧拉ZYZ </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggaa74ef17cc7fdd81d2aa66c7e2ecdc1f5acf6309d1775a9e5bd4a08569eb4807c9"></a>POSE_TYPE_EULER_XYZ&#160;</td><td class="fielddoc">
+<p>欧拉XYZ </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggaa74ef17cc7fdd81d2aa66c7e2ecdc1f5abb4f0e53bb87a89a2f902be3eb992961"></a>POSE_TYPE_EULER_ZYX&#160;</td><td class="fielddoc">
+<p>欧拉ZYX </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggaa74ef17cc7fdd81d2aa66c7e2ecdc1f5a67ac27e2f54014de3c388b36b80c0f38"></a>POSE_TYPE_RPY&#160;</td><td class="fielddoc">
+<p>RPY </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggaa74ef17cc7fdd81d2aa66c7e2ecdc1f5a3efe381cc0466243318fc9e380243623"></a>POSE_TYPE_QUATERNION&#160;</td><td class="fielddoc">
+<p>四元数表示法 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggaa74ef17cc7fdd81d2aa66c7e2ecdc1f5a41c25510f6b329ea5a7b3434985c277d"></a>POSE_TYPE_XYZAB&#160;</td><td class="fielddoc">
+<p>用于五轴机床 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggaa74ef17cc7fdd81d2aa66c7e2ecdc1f5a2d78f2b864e88443ffcff60ea7e72fd0"></a>POSE_TYPE_ROTATE_VECTOR&#160;</td><td class="fielddoc">
+<p>旋转矢量 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggaa74ef17cc7fdd81d2aa66c7e2ecdc1f5aa7df48ebc856a23dd95392d93a2417c4"></a>POSE_TYPE_EULER_ZXZ&#160;</td><td class="fielddoc">
+<p>欧拉ZXZ </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggaa74ef17cc7fdd81d2aa66c7e2ecdc1f5af5d07785382a39c32d268aa25fa87893"></a>POSE_TYPE_EULER_ZYX_PANASONIC&#160;</td><td class="fielddoc">
+<p>松下机器人欧拉ZYX </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="ga4a0805248cb708a727a330a64b36ec44"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___hand_eye.html#ga4a0805248cb708a727a330a64b36ec44">cs::RobotPoseUnit</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_hand_eye_input_8hpp.html">hpp/HandEye/HandEyeInput.hpp</a>&gt;</code></p>
+
+<p>枚举: 当前位姿方向的表示单位 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a class="anchor" id="ga4a0805248cb708a727a330a64b36ec44a1807849f57c33e85c4592814d11a026c"></a>POSE_UNIT_RADIAN&#160;</td><td class="fielddoc">
+<p>弧度 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ga4a0805248cb708a727a330a64b36ec44aa13fc4642aaa8af25900732a711bd02e"></a>POSE_UNIT_DEGREE&#160;</td><td class="fielddoc">
+<p>角度 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="gae0d280905169cd33caffd2390ead974c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::downloadCameraParams </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___camera.html#ga21d13702164dc7a0eb742c1c85a55268">ICameraPtr</a>&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>cameraParamPath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_hand_eye_8hpp.html">hpp/HandEye/HandEye.hpp</a>&gt;</code></p>
+
+<p>下载重建标定板用的相机参数，保存到指定目录 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">camera</td><td>: 已连接成功的相机指针 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cameraParamPath</td><td>: 保存参数的文件夹路径 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+<dl><dt><b>示例: </b></dt><dd><a class="el" href="_sample_hand_eye_8cpp-example.html#a19">SampleHandEye.cpp</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="gae681e89564720e033087f7e8f60c845f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::reconstructChessboardPoints </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>cameraParamPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramname"><em>imageLeft</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramname"><em>imageRight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; cs::Point3f &gt; &amp;&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; cs::Point3f &gt; &amp;&#160;</td>
+          <td class="paramname"><em>constraintPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>chessboardHorizontalPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>chessboardVerticalPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>chessboardGridSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>error</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_hand_eye_8hpp.html">hpp/HandEye/HandEye.hpp</a>&gt;</code></p>
+
+<p>重建棋盘格标定板角点坐标 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cameraParamPath</td><td>: 保存相机参数的路径 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">imageLeft</td><td>: 左相机图像 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">imageRight</td><td>: 右相机图像 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>: 图像宽度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>: 图像高度 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">points</td><td>: 重建的标定板角点输出 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">constraintPoints</td><td>: 输出相机坐标系下的特征点（标定板的四个角） </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">chessboardHorizontalPoints</td><td>: 横向标定板角点数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">chessboardVerticalPoints</td><td>: 竖向标定板角点数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">chessboardGridSize</td><td>: 标定板格子宽度 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>: 输出重建误差 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gae0056dbc1dd44dce0d671c543e67fba3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::reconstructCircleboardPoints </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>cameraParamPath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramname"><em>imageLeft</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramname"><em>imageRight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; cs::Point3f &gt; &amp;&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; cs::Point3f &gt; &amp;&#160;</td>
+          <td class="paramname"><em>constraintPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>boardHorizontalPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>boardVerticalPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>boardGridSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>circleRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::pair&lt; int, int &gt;&gt;&#160;</td>
+          <td class="paramname"><em>bigCircleSetting</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>error</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_hand_eye_8hpp.html">hpp/HandEye/HandEye.hpp</a>&gt;</code></p>
+
+<p>重建圆点阵标定板的圆心坐标 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cameraParamPath</td><td>: 保存相机参数的路径 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">imageLeft</td><td>: 左相机图像 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">imageRight</td><td>: 右相机图像 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>: 图像宽度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>: 图像高度 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">points</td><td>: 重建的标定板角点输出 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">constraintPoints</td><td>: 输出相机坐标系下的特征点（4个十字交叉点） </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">boardHorizontalPoints</td><td>: 横向标定板角点数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">boardVerticalPoints</td><td>: 竖向标定板角点数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">boardGridSize</td><td>: 圆心间间距 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">circleRadius</td><td>: 小圆半径 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bigCircleSetting</td><td>: 大圆位置 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+<dl><dt><b>示例: </b></dt><dd><a class="el" href="_sample_hand_eye_8cpp-example.html#a22">SampleHandEye.cpp</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ga66f90cca56d02daf2c0e3ffd41ef077f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::reconstructChessboardPoints </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___camera.html#ga21d13702164dc7a0eb742c1c85a55268">ICameraPtr</a>&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramname"><em>imageLeft</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramname"><em>imageRight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; cs::Point3f &gt; &amp;&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; cs::Point3f &gt; &amp;&#160;</td>
+          <td class="paramname"><em>constraintPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>boardHorizontalPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>boardVerticalPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>boardGridSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>error</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_hand_eye_8hpp.html">hpp/HandEye/HandEye.hpp</a>&gt;</code></p>
+
+<p>重建棋盘格标定板角点坐标 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">camera</td><td>: 已连接成功的相机指针 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">imageLeft</td><td>: 左相机图像 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">imageRight</td><td>: 右相机图像 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>: 图像宽度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>: 图像高度 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">points</td><td>: 重建的标定板角点输出 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">constraintPoints</td><td>: 输出相机坐标系下的特征点（标定板的四个角） </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">boardHorizontalPoints</td><td>: 横向标定板角点数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">boardVerticalPoints</td><td>: 竖向标定板角点数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">boardGridSize</td><td>: 标定板格子宽度 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>: 输出重建误差 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga57a02ace53366c2a73881f5717414832"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::reconstructCircleboardPoints </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___camera.html#ga21d13702164dc7a0eb742c1c85a55268">ICameraPtr</a>&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramname"><em>imageLeft</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramname"><em>imageRight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; cs::Point3f &gt; &amp;&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; cs::Point3f &gt; &amp;&#160;</td>
+          <td class="paramname"><em>constraintPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>boardHorizontalPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>boardVerticalPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>boardGridSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>circleRadius</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::pair&lt; int, int &gt;&gt;&#160;</td>
+          <td class="paramname"><em>bigCircleSetting</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>error</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_hand_eye_8hpp.html">hpp/HandEye/HandEye.hpp</a>&gt;</code></p>
+
+<p>重建圆点阵标定板的圆心坐标 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">camera</td><td>: 已连接成功的相机指针 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">imageLeft</td><td>: 左相机图像 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">imageRight</td><td>: 右相机图像 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>: 图像宽度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>: 图像高度 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">points</td><td>: 重建的标定板角点输出 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">constraintPoints</td><td>: 输出相机坐标系下的特征点（4个十字交叉点） </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">boardHorizontalPoints</td><td>: 横向标定板角点数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">boardVerticalPoints</td><td>: 竖向标定板角点数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">boardGridSize</td><td>: 圆心间间距 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">circleRadius</td><td>: 小圆半径 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bigCircleSetting</td><td>: 大圆位置 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga018b1e9a633c6ada31fc5cea779f4e84"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::calibrateEyeToHand </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classcs_1_1_hand_eye_calibration_input.html">HandEyeCalibrationInput</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcs_1_1_hand_eye_matrix.html">HandEyeMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_hand_eye_8hpp.html">hpp/HandEye/HandEye.hpp</a>&gt;</code></p>
+
+<p>相机安装在机器人外部时计算旋转平移矩阵 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>: 相机在机器人外部时的标定输入 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">matrix</td><td>: 输出的眼到手矩阵 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>: 输出误差 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga3b7dd3b2cd1f676921c49671a67d3ae6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::calibrateEyeInHand </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classcs_1_1_hand_eye_calibration_input.html">HandEyeCalibrationInput</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcs_1_1_hand_eye_matrix.html">HandEyeMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_hand_eye_8hpp.html">hpp/HandEye/HandEye.hpp</a>&gt;</code></p>
+
+<p>相机固定在机器人上时计算旋转平移矩阵（不需要触碰特征点） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>: 相机固定在机器人上时的标定输入 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">matrix</td><td>: 输出的眼到手矩阵 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>: 输出误差 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+<dl><dt><b>示例: </b></dt><dd><a class="el" href="_sample_hand_eye_8cpp-example.html#a25">SampleHandEye.cpp</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="gad22f528c2043945736184a5ff0a60d7b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::calibrateEyeInHandWithChessboardConstraintPoints </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classcs_1_1_hand_eye_calibration_input.html">HandEyeCalibrationInput</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; cs::Point3f &gt; &amp;&#160;</td>
+          <td class="paramname"><em>constraintPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcs_1_1_hand_eye_matrix.html">HandEyeMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>error</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_hand_eye_8hpp.html">hpp/HandEye/HandEye.hpp</a>&gt;</code></p>
+
+<p>使用棋盘格标定板，相机固定在机器人上时计算旋转平移矩阵（需要触碰四个角的角点） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input</td><td>: 相机在机器人外部时的标定输入 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">constraintPoints</td><td>: 标定板四个角点在机器人坐标系的坐标 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">matrix</td><td>: 输出的眼到手矩阵 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>: 输出误差 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga0242a61c31f27fd712db2889049a0a74"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::calibrateEyeInHandWithCircleboardConstraintPoints </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="classcs_1_1_hand_eye_calibration_input.html">HandEyeCalibrationInput</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>inputs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; cs::Point3f &gt; &amp;&#160;</td>
+          <td class="paramname"><em>constraintPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>boardHorizontalPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>boardVerticalPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>boardGridSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcs_1_1_hand_eye_matrix.html">HandEyeMatrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>error</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_hand_eye_8hpp.html">hpp/HandEye/HandEye.hpp</a>&gt;</code></p>
+
+<p>使用圆点阵标定板，相机固定在机器人上时计算旋转平移矩阵（需要触碰四个十字特征点） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">inputs</td><td>: 相机在机器人外部时的标定输入 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">constraintPoints</td><td>: 标定板四个十字交叉点在机器人坐标系下的坐标 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">matrix</td><td>: 输出的眼到手矩阵 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>: 输出误差 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+<dl><dt><b>示例: </b></dt><dd><a class="el" href="_sample_hand_eye_8cpp-example.html#a26">SampleHandEye.cpp</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ga55d40fe53dd38fd83cc7c64f8c22ed20"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::transformPointFromEyeToHand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcs_1_1_robot_pose_matrix4f.html">RobotPoseMatrix4f</a>&#160;</td>
+          <td class="paramname"><em>pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_hand_eye_input_8hpp.html#struct_point3f">Point3f</a>&#160;</td>
+          <td class="paramname"><em>inputPoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcs_1_1_hand_eye_matrix.html">HandEyeMatrix</a>&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_hand_eye_input_8hpp.html#struct_point3f">Point3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>outPoint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_hand_eye_8hpp.html">hpp/HandEye/HandEye.hpp</a>&gt;</code></p>
+
+<p>将相机坐标系下的点转到机器人坐标系 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pose</td><td>: 机器人当前位姿 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">inputPoint</td><td>: 相机坐标系下的点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">matrix</td><td>: 眼到手矩阵，calibrateEyeToHand/calibrateEyeInHand计算得到 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">outPoint</td><td>: 输出到机器人坐标系下的点 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+<dl><dt><b>示例: </b></dt><dd><a class="el" href="_sample_hand_eye_8cpp-example.html#a29">SampleHandEye.cpp</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="gacc56898574201fb9828f1672378982af"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::transformVectorFromEyeToHand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcs_1_1_robot_pose_matrix4f.html">RobotPoseMatrix4f</a>&#160;</td>
+          <td class="paramname"><em>pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_hand_eye_input_8hpp.html#struct_vector3f">Vector3f</a>&#160;</td>
+          <td class="paramname"><em>inputVector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcs_1_1_hand_eye_matrix.html">HandEyeMatrix</a>&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_hand_eye_input_8hpp.html#struct_vector3f">Vector3f</a> &amp;&#160;</td>
+          <td class="paramname"><em>outVector</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_hand_eye_8hpp.html">hpp/HandEye/HandEye.hpp</a>&gt;</code></p>
+
+<p>将相机坐标系下的向量转到机器人坐标系 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pose</td><td>: 机器人当前位姿 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">inputVector</td><td>: 相机坐标系下的向量 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">matrix</td><td>: 眼到手矩阵，calibrateEyeToHand/calibrateEyeInHand计算得到 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">outVector</td><td>: 输出到机器人坐标系下的向量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gac10efe2b666bd67a39bfd97bf1eb8f05"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::transformPoseFromEyeToHand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcs_1_1_robot_pose_matrix4f.html">RobotPoseMatrix4f</a>&#160;</td>
+          <td class="paramname"><em>toolPose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcs_1_1_robot_pose_matrix4f.html">RobotPoseMatrix4f</a>&#160;</td>
+          <td class="paramname"><em>poseInEye</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcs_1_1_hand_eye_matrix.html">HandEyeMatrix</a>&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___hand_eye.html#gaa74ef17cc7fdd81d2aa66c7e2ecdc1f5">RobotPoseType</a>&#160;</td>
+          <td class="paramname"><em>poseType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___hand_eye.html#ga4a0805248cb708a727a330a64b36ec44">RobotPoseUnit</a>&#160;</td>
+          <td class="paramname"><em>poseUnit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_hand_eye_input_8hpp.html#struct_robot_pose">RobotPose</a> &amp;&#160;</td>
+          <td class="paramname"><em>outPoseInHand</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_hand_eye_8hpp.html">hpp/HandEye/HandEye.hpp</a>&gt;</code></p>
+
+<p>将相机坐标系下的位姿转到机器人坐标系 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">toolPose</td><td>: 机器人当前位姿 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">poseInEye</td><td>: 相机坐标系下的位姿 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">matrix</td><td>: 眼到手矩阵，calibrateEyeToHand/calibrateEyeInHand计算得到 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">poseType</td><td>：输出位姿表示类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">poseUnit</td><td>: 输出姿态表示单位角度/弧度 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">outPoseInHand</td><td>: 输出位姿 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga8d9ba7c4624912a0852be512aee860a5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::transformPoseFromEyeToHand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcs_1_1_robot_pose_matrix4f.html">RobotPoseMatrix4f</a>&#160;</td>
+          <td class="paramname"><em>toolPose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcs_1_1_robot_pose_matrix4f.html">RobotPoseMatrix4f</a>&#160;</td>
+          <td class="paramname"><em>poseInEye</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcs_1_1_hand_eye_matrix.html">HandEyeMatrix</a>&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcs_1_1_robot_pose_matrix4f.html">RobotPoseMatrix4f</a>&#160;</td>
+          <td class="paramname"><em>outMatrixInHand</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_hand_eye_8hpp.html">hpp/HandEye/HandEye.hpp</a>&gt;</code></p>
+
+<p>将相机坐标系下的位姿转到机器人坐标系 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">toolPose</td><td>: 机器人当前位姿 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">poseInEye</td><td>: 相机坐标系下的位姿 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">matrix</td><td>: 眼到手矩阵，calibrateEyeToHand/calibrateEyeInHand计算得到 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">outMatrixInHand</td><td>: 输出位姿 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga1ab9442d62c16d6d6f2d18d7cc583804"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::transformPointFromHandToEye </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcs_1_1_robot_pose_matrix4f.html">cs::RobotPoseMatrix4f</a>&#160;</td>
+          <td class="paramname"><em>pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cs::Point3f&#160;</td>
+          <td class="paramname"><em>inputPoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcs_1_1_hand_eye_matrix.html">cs::HandEyeMatrix</a>&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cs::Point3f &amp;&#160;</td>
+          <td class="paramname"><em>outPoint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_hand_eye_8hpp.html">hpp/HandEye/HandEye.hpp</a>&gt;</code></p>
+
+<p>将机器人坐标系下的点转到相机坐标系 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pose</td><td>: 机器人当前位姿 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">inputPoint</td><td>: 机器人坐标系下的点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">matrix</td><td>: 眼到手矩阵，calibrateEyeToHand/calibrateEyeInHand计算得到 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">outPoint</td><td>: 输出相机坐标系下的点 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gab244effbf13453d0aa9cfd4c6dd26a17"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::transformVectorFromHandToEye </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcs_1_1_robot_pose_matrix4f.html">cs::RobotPoseMatrix4f</a>&#160;</td>
+          <td class="paramname"><em>pose</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cs::Vector3f&#160;</td>
+          <td class="paramname"><em>inputVector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcs_1_1_hand_eye_matrix.html">cs::HandEyeMatrix</a>&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cs::Vector3f &amp;&#160;</td>
+          <td class="paramname"><em>outVector</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_hand_eye_8hpp.html">hpp/HandEye/HandEye.hpp</a>&gt;</code></p>
+
+<p>将机器人坐标系下的向量转到相机坐标系 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pose</td><td>: 机器人当前位姿 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">inputVector</td><td>: 机器人坐标系下的向量 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">matrix</td><td>: 眼到手矩阵，calibrateEyeToHand/calibrateEyeInHand计算得到 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">outVector</td><td>: 输出到相机相机坐标系下的向量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaec445758637819d988b8356ae108c598"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::reconstructPoints </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___camera.html#ga21d13702164dc7a0eb742c1c85a55268">ICameraPtr</a>&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="_hand_eye_input_8hpp.html#struct_point2f">Point2f</a> &gt;&#160;</td>
+          <td class="paramname"><em>leftPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="_hand_eye_input_8hpp.html#struct_point2f">Point2f</a> &gt;&#160;</td>
+          <td class="paramname"><em>rightPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="_hand_eye_input_8hpp.html#struct_point3f">Point3f</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___hand_eye.html#gaf10372b68ff31f1b48bf6ef08d4c73c9">BASELINE_TYPE</a>&#160;</td>
+          <td class="paramname"><em>type</em> = <code><a class="el" href="group___hand_eye.html#ggaf10372b68ff31f1b48bf6ef08d4c73c9ad1a2a1f6530e7acb89936db0c7e01548">BASELINE_HORIZONTAL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_hand_eye_8hpp.html">hpp/HandEye/HandEye.hpp</a>&gt;</code></p>
+
+<p>通过左右相机图片中提取的特征点坐标计算到三维点坐标 </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">弃用:</a></b></dt><dd></dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">camera</td><td>: 已连接成功的相机指针 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">leftPoints</td><td>: 左相机图片中提取的特征点坐标 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rightPoints</td><td>: 右相机图片中提取的特征点坐标 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">points</td><td>: 重建输出的三维点坐标 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>: 基线类型 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga3b24c0cc49819e29024dc88fc32c5d3a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::reconstructChessboardPoints </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___camera.html#ga21d13702164dc7a0eb742c1c85a55268">ICameraPtr</a>&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___frame.html#gaef9728e91022942cf396bbb7de90b619">IFramePtr</a>&#160;</td>
+          <td class="paramname"><em>pairFrame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="_hand_eye_input_8hpp.html#struct_point3f">Point3f</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>chessboardHorizontalPoints</em> = <code>9</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>chessboardVerticalPoints</em> = <code>6</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___hand_eye.html#gaf10372b68ff31f1b48bf6ef08d4c73c9">BASELINE_TYPE</a>&#160;</td>
+          <td class="paramname"><em>type</em> = <code><a class="el" href="group___hand_eye.html#ggaf10372b68ff31f1b48bf6ef08d4c73c9ad1a2a1f6530e7acb89936db0c7e01548">BASELINE_HORIZONTAL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_hand_eye_8hpp.html">hpp/HandEye/HandEye.hpp</a>&gt;</code></p>
+
+<p>重建标定板坐标 </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">弃用:</a></b></dt><dd></dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">camera</td><td>: 已连接成功的相机指针 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pairFrame</td><td>: 格式是STREAM_FORMAT_PAIR的帧数据 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">points</td><td>: 重建的标定板角点输出 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">chessboardHorizontalPoints</td><td>: 横向标定板角点数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">chessboardVerticalPoints</td><td>: 竖向标定板角点数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>: 基线方向, @参见 BASELINE_TYPE </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga2883090dcd8c6ec6e0af42adc79b63a9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::reconstructChessboardPoints </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___camera.html#ga21d13702164dc7a0eb742c1c85a55268">ICameraPtr</a>&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramname"><em>imageLeft</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char *&#160;</td>
+          <td class="paramname"><em>imageRight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; cs::Point3f &gt; &amp;&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>chessboardHorizontalPoints</em> = <code>9</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>chessboardVerticalPoints</em> = <code>6</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___hand_eye.html#gaf10372b68ff31f1b48bf6ef08d4c73c9">BASELINE_TYPE</a>&#160;</td>
+          <td class="paramname"><em>type</em> = <code><a class="el" href="group___hand_eye.html#ggaf10372b68ff31f1b48bf6ef08d4c73c9ad1a2a1f6530e7acb89936db0c7e01548">BASELINE_HORIZONTAL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_hand_eye_8hpp.html">hpp/HandEye/HandEye.hpp</a>&gt;</code></p>
+
+<p>重建标定板坐标 </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">弃用:</a></b></dt><dd></dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">camera</td><td>: 已连接成功的相机指针 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">imageLeft</td><td>: 左相机图像 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">imageRight</td><td>: 右相机图像 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>: 图像宽度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>: 图像高度 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">points</td><td>: 重建的标定板角点输出 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">chessboardHorizontalPoints</td><td>: 横向标定板角点数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">chessboardVerticalPoints</td><td>: 竖向标定板角点数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>: 基线方向, @参见 BASELINE_TYPE </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

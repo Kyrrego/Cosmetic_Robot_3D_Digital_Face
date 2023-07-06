@@ -1,0 +1,1114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>3DCamera: 相机操作</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">3DCamera
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li><a href="examples.html"><span>示例</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">相机操作</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>提供相机连接，打开数据流，设置属性，读取参数等功能  
+<a href="#details">更多...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:classcs_1_1_i_camera"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___camera.html#classcs_1_1_i_camera">cs::ICamera</a></td></tr>
+<tr class="memdesc:classcs_1_1_i_camera"><td class="mdescLeft">&#160;</td><td class="mdescRight">相机接口  <a href="group___camera.html#classcs_1_1_i_camera">更多...</a><br /></td></tr>
+<tr class="separator:classcs_1_1_i_camera"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:gae4d6502eec55bde8acf3989c801c8765"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___camera.html#gae4d6502eec55bde8acf3989c801c8765">cs::FrameCallback</a>) (IFramePtr frame, void *usrData)</td></tr>
+<tr class="memdesc:gae4d6502eec55bde8acf3989c801c8765"><td class="mdescLeft">&#160;</td><td class="mdescRight">获得帧数据回调函数  <a href="group___camera.html#gae4d6502eec55bde8acf3989c801c8765">更多...</a><br /></td></tr>
+<tr class="separator:gae4d6502eec55bde8acf3989c801c8765"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga21d13702164dc7a0eb742c1c85a55268"><td class="memItemLeft" align="right" valign="top">typedef std::shared_ptr&lt; ICamera &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___camera.html#ga21d13702164dc7a0eb742c1c85a55268">cs::ICameraPtr</a></td></tr>
+<tr class="memdesc:ga21d13702164dc7a0eb742c1c85a55268"><td class="mdescLeft">&#160;</td><td class="mdescRight">相机对象的共享指针  <a href="group___camera.html#ga21d13702164dc7a0eb742c1c85a55268">更多...</a><br /></td></tr>
+<tr class="separator:ga21d13702164dc7a0eb742c1c85a55268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga24c8a4913384c5656c3ac466ed7715cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> ICameraPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___camera.html#ga24c8a4913384c5656c3ac466ed7715cf">cs::getCameraPtr</a> ()</td></tr>
+<tr class="separator:ga24c8a4913384c5656c3ac466ed7715cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<p>提供相机连接，打开数据流，设置属性，读取参数等功能 </p>
+<hr/><h2 class="groupheader">类说明</h2>
+<a name="classcs_1_1_i_camera" id="classcs_1_1_i_camera"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">class cs::ICamera</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>相机接口 </p>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h3>Public 成员函数</h3></td></tr>
+<tr class="memitem:aa5070b0d3bdf3128c7863ae26598970b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___camera.html#aa5070b0d3bdf3128c7863ae26598970b">~ICamera</a> ()</td></tr>
+<tr class="separator:aa5070b0d3bdf3128c7863ae26598970b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad77e6f8770efad1c9530a847eb3ac8f8"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___camera.html#ad77e6f8770efad1c9530a847eb3ac8f8">connect</a> ()=0</td></tr>
+<tr class="memdesc:ad77e6f8770efad1c9530a847eb3ac8f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">连接任意一个相机  <a href="#ad77e6f8770efad1c9530a847eb3ac8f8">更多...</a><br /></td></tr>
+<tr class="separator:ad77e6f8770efad1c9530a847eb3ac8f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cd656b385c73d067b7e6f30e5bf23f4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___camera.html#a6cd656b385c73d067b7e6f30e5bf23f4">connect</a> (<a class="el" href="_types_8hpp.html#struct_camera_info">CameraInfo</a> info)=0</td></tr>
+<tr class="memdesc:a6cd656b385c73d067b7e6f30e5bf23f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">连接指定信息的相机  <a href="#a6cd656b385c73d067b7e6f30e5bf23f4">更多...</a><br /></td></tr>
+<tr class="separator:a6cd656b385c73d067b7e6f30e5bf23f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ad3c4637e5967819b98a5b901eb2b5f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___camera.html#a2ad3c4637e5967819b98a5b901eb2b5f">getInfo</a> (<a class="el" href="_types_8hpp.html#struct_camera_info">CameraInfo</a> &amp;info)=0</td></tr>
+<tr class="memdesc:a2ad3c4637e5967819b98a5b901eb2b5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前连接相机的信息，包括序列号，版本信息，标识Id  <a href="#a2ad3c4637e5967819b98a5b901eb2b5f">更多...</a><br /></td></tr>
+<tr class="separator:a2ad3c4637e5967819b98a5b901eb2b5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62f460503a67833849a19d580a93c29a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___camera.html#a62f460503a67833849a19d580a93c29a">disconnect</a> ()=0</td></tr>
+<tr class="memdesc:a62f460503a67833849a19d580a93c29a"><td class="mdescLeft">&#160;</td><td class="mdescRight">断开相机连接  <a href="#a62f460503a67833849a19d580a93c29a">更多...</a><br /></td></tr>
+<tr class="separator:a62f460503a67833849a19d580a93c29a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a793f0ecca1d70958e876f39ac7c4086c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___camera.html#a793f0ecca1d70958e876f39ac7c4086c">getStreamInfos</a> (<a class="el" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a> streamType, std::vector&lt; <a class="el" href="_types_8hpp.html#struct_stream_info">StreamInfo</a> &gt; &amp;streamInfos)=0</td></tr>
+<tr class="memdesc:a793f0ecca1d70958e876f39ac7c4086c"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定类型的数据流所支持的流格式信息列表  <a href="#a793f0ecca1d70958e876f39ac7c4086c">更多...</a><br /></td></tr>
+<tr class="separator:a793f0ecca1d70958e876f39ac7c4086c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb80e18125c2a1b1d1d99441ad863f24"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___camera.html#adb80e18125c2a1b1d1d99441ad863f24">startStream</a> (<a class="el" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a> streamType, <a class="el" href="_types_8hpp.html#struct_stream_info">StreamInfo</a> info, <a class="el" href="group___camera.html#gae4d6502eec55bde8acf3989c801c8765">FrameCallback</a> callback, void *userData)=0</td></tr>
+<tr class="memdesc:adb80e18125c2a1b1d1d99441ad863f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">打开数据流并通过回调函数返回帧数据  <a href="#adb80e18125c2a1b1d1d99441ad863f24">更多...</a><br /></td></tr>
+<tr class="separator:adb80e18125c2a1b1d1d99441ad863f24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23f4cf583f519c56386d071a6b156de9"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___camera.html#a23f4cf583f519c56386d071a6b156de9">startStream</a> (<a class="el" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a> streamType, <a class="el" href="_types_8hpp.html#struct_stream_info">StreamInfo</a> info)=0</td></tr>
+<tr class="memdesc:a23f4cf583f519c56386d071a6b156de9"><td class="mdescLeft">&#160;</td><td class="mdescRight">打开数据流并通过getFrame主动获取帧数据  <a href="#a23f4cf583f519c56386d071a6b156de9">更多...</a><br /></td></tr>
+<tr class="separator:a23f4cf583f519c56386d071a6b156de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a013d980184efa4a9cc2d2e08a7334c8b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___camera.html#a013d980184efa4a9cc2d2e08a7334c8b">stopStream</a> (<a class="el" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a> streamType)=0</td></tr>
+<tr class="memdesc:a013d980184efa4a9cc2d2e08a7334c8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止数据流  <a href="#a013d980184efa4a9cc2d2e08a7334c8b">更多...</a><br /></td></tr>
+<tr class="separator:a013d980184efa4a9cc2d2e08a7334c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59a3589b7ea80fd5854b4ac0a08814f4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___camera.html#a59a3589b7ea80fd5854b4ac0a08814f4">getFrame</a> (<a class="el" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a> streamType, <a class="el" href="group___frame.html#gaef9728e91022942cf396bbb7de90b619">IFramePtr</a> &amp;frame, int timeout_ms=5000)=0</td></tr>
+<tr class="memdesc:a59a3589b7ea80fd5854b4ac0a08814f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">主动获取当前流输出的帧数据  <a href="#a59a3589b7ea80fd5854b4ac0a08814f4">更多...</a><br /></td></tr>
+<tr class="separator:a59a3589b7ea80fd5854b4ac0a08814f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa727b009550642ae2bf28f5c730e724c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___camera.html#aa727b009550642ae2bf28f5c730e724c">softTrigger</a> (int count=1)=0</td></tr>
+<tr class="memdesc:aa727b009550642ae2bf28f5c730e724c"><td class="mdescLeft">&#160;</td><td class="mdescRight">软触发模式下触发N帧（暂时只支持1帧）  <a href="#aa727b009550642ae2bf28f5c730e724c">更多...</a><br /></td></tr>
+<tr class="separator:aa727b009550642ae2bf28f5c730e724c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac17701cfa543e860081d2851c9eb8382"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___camera.html#ac17701cfa543e860081d2851c9eb8382">getPropertyRange</a> (<a class="el" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a> streamType, <a class="el" href="group___property_type.html#ga59b796677c23b170285aaed0220587e4">PROPERTY_TYPE</a> propertyType, float &amp;min, float &amp;max, float &amp;step)=0</td></tr>
+<tr class="memdesc:ac17701cfa543e860081d2851c9eb8382"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定流的指定属性范围  <a href="#ac17701cfa543e860081d2851c9eb8382">更多...</a><br /></td></tr>
+<tr class="separator:ac17701cfa543e860081d2851c9eb8382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bbae59b0a6c219621aa8c0fb1f2efd8"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___camera.html#a9bbae59b0a6c219621aa8c0fb1f2efd8">getProperty</a> (<a class="el" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a> streamType, <a class="el" href="group___property_type.html#ga59b796677c23b170285aaed0220587e4">PROPERTY_TYPE</a> propertyType, float &amp;value)=0</td></tr>
+<tr class="memdesc:a9bbae59b0a6c219621aa8c0fb1f2efd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定流的属性值  <a href="#a9bbae59b0a6c219621aa8c0fb1f2efd8">更多...</a><br /></td></tr>
+<tr class="separator:a9bbae59b0a6c219621aa8c0fb1f2efd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3abda0dfd1ee522d7542dd374f003814"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___camera.html#a3abda0dfd1ee522d7542dd374f003814">setProperty</a> (<a class="el" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a> streamType, <a class="el" href="group___property_type.html#ga59b796677c23b170285aaed0220587e4">PROPERTY_TYPE</a> propertyType, float value)=0</td></tr>
+<tr class="memdesc:a3abda0dfd1ee522d7542dd374f003814"><td class="mdescLeft">&#160;</td><td class="mdescRight">修改指定流的属性值  <a href="#a3abda0dfd1ee522d7542dd374f003814">更多...</a><br /></td></tr>
+<tr class="separator:a3abda0dfd1ee522d7542dd374f003814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47e88d1a38c180306073baa79071fe02"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___camera.html#a47e88d1a38c180306073baa79071fe02">setPropertyExtension</a> (<a class="el" href="group___property_extension_type.html#ga7e837ea99fe20433296bf5140b06d512">PROPERTY_TYPE_EXTENSION</a> propertyType, <a class="el" href="_types_8hpp.html#union_property_extension">PropertyExtension</a> value)=0</td></tr>
+<tr class="memdesc:a47e88d1a38c180306073baa79071fe02"><td class="mdescLeft">&#160;</td><td class="mdescRight">修改扩展属性值  <a href="#a47e88d1a38c180306073baa79071fe02">更多...</a><br /></td></tr>
+<tr class="separator:a47e88d1a38c180306073baa79071fe02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a837e2f6f6cf12c56618aeb4b5055b758"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___camera.html#a837e2f6f6cf12c56618aeb4b5055b758">getPropertyExtension</a> (<a class="el" href="group___property_extension_type.html#ga7e837ea99fe20433296bf5140b06d512">PROPERTY_TYPE_EXTENSION</a> propertyType, <a class="el" href="_types_8hpp.html#union_property_extension">PropertyExtension</a> &amp;value)=0</td></tr>
+<tr class="memdesc:a837e2f6f6cf12c56618aeb4b5055b758"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取扩展属性的当前值  <a href="#a837e2f6f6cf12c56618aeb4b5055b758">更多...</a><br /></td></tr>
+<tr class="separator:a837e2f6f6cf12c56618aeb4b5055b758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95139a9e5fca04368cfd36c0ff6a1637"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___camera.html#a95139a9e5fca04368cfd36c0ff6a1637">getIntrinsics</a> (<a class="el" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a> streamType, <a class="el" href="_types_8hpp.html#struct_intrinsics">Intrinsics</a> &amp;intrinsics)=0</td></tr>
+<tr class="memdesc:a95139a9e5fca04368cfd36c0ff6a1637"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定类型数据流的内参  <a href="#a95139a9e5fca04368cfd36c0ff6a1637">更多...</a><br /></td></tr>
+<tr class="separator:a95139a9e5fca04368cfd36c0ff6a1637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26e77922ed50b8ceaf2744104be2e56c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___camera.html#a26e77922ed50b8ceaf2744104be2e56c">getExtrinsics</a> (<a class="el" href="_types_8hpp.html#struct_extrinsics">Extrinsics</a> &amp;extrinsics)=0</td></tr>
+<tr class="memdesc:a26e77922ed50b8ceaf2744104be2e56c"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取从深度流到RGB流的旋转平移参数  <a href="#a26e77922ed50b8ceaf2744104be2e56c">更多...</a><br /></td></tr>
+<tr class="separator:a26e77922ed50b8ceaf2744104be2e56c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee4376d986f078f492a87e813319d9f1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___camera.html#aee4376d986f078f492a87e813319d9f1">getDistort</a> (<a class="el" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a> streamType, <a class="el" href="_types_8hpp.html#struct_distort">Distort</a> &amp;distort)=0</td></tr>
+<tr class="memdesc:aee4376d986f078f492a87e813319d9f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取指定类型数据流的畸变参数  <a href="#aee4376d986f078f492a87e813319d9f1">更多...</a><br /></td></tr>
+<tr class="separator:aee4376d986f078f492a87e813319d9f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36292d672c5096a34c0b25bb2dccada5"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___camera.html#a36292d672c5096a34c0b25bb2dccada5">restart</a> ()=0</td></tr>
+<tr class="memdesc:a36292d672c5096a34c0b25bb2dccada5"><td class="mdescLeft">&#160;</td><td class="mdescRight">重启相机  <a href="#a36292d672c5096a34c0b25bb2dccada5">更多...</a><br /></td></tr>
+<tr class="separator:a36292d672c5096a34c0b25bb2dccada5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7c6f614e2311a84bd3ad31c4d1eb24f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___camera.html#ac7c6f614e2311a84bd3ad31c4d1eb24f">setUserData</a> (char *userData, int length)=0</td></tr>
+<tr class="memdesc:ac7c6f614e2311a84bd3ad31c4d1eb24f"><td class="mdescLeft">&#160;</td><td class="mdescRight">写入用户自定义数据，长度必须要小于1024字节  <a href="#ac7c6f614e2311a84bd3ad31c4d1eb24f">更多...</a><br /></td></tr>
+<tr class="separator:ac7c6f614e2311a84bd3ad31c4d1eb24f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a735afd0f82d03d1e68651e3110bd90ff"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___camera.html#a735afd0f82d03d1e68651e3110bd90ff">getUserData</a> (char *userData, int &amp;length)=0</td></tr>
+<tr class="memdesc:a735afd0f82d03d1e68651e3110bd90ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取用户自定义数据，长度必须要小于1024字节  <a href="#a735afd0f82d03d1e68651e3110bd90ff">更多...</a><br /></td></tr>
+<tr class="separator:a735afd0f82d03d1e68651e3110bd90ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">构造及析构函数说明</h4>
+<a class="anchor" id="aa5070b0d3bdf3128c7863ae26598970b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual cs::ICamera::~ICamera </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h4 class="groupheader">成员函数说明</h4>
+<a class="anchor" id="ad77e6f8770efad1c9530a847eb3ac8f8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::ICamera::connect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>连接任意一个相机 </p>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a6cd656b385c73d067b7e6f30e5bf23f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::ICamera::connect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#struct_camera_info">CameraInfo</a>&#160;</td>
+          <td class="paramname"><em>info</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>连接指定信息的相机 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>:指定的相机信息，可通过ISystem::queryCameras接口获得信息列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2ad3c4637e5967819b98a5b901eb2b5f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::ICamera::getInfo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#struct_camera_info">CameraInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>info</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取当前连接相机的信息，包括序列号，版本信息，标识Id </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">info</td><td>:接收返回的相机信息 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a62f460503a67833849a19d580a93c29a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::ICamera::disconnect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>断开相机连接 </p>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a793f0ecca1d70958e876f39ac7c4086c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::ICamera::getStreamInfos </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a>&#160;</td>
+          <td class="paramname"><em>streamType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="_types_8hpp.html#struct_stream_info">StreamInfo</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>streamInfos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取指定类型的数据流所支持的流格式信息列表 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">streamType</td><td>：流类型 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">streamInfos</td><td>：返回的流格式信息列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="adb80e18125c2a1b1d1d99441ad863f24"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::ICamera::startStream </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a>&#160;</td>
+          <td class="paramname"><em>streamType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#struct_stream_info">StreamInfo</a>&#160;</td>
+          <td class="paramname"><em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___camera.html#gae4d6502eec55bde8acf3989c801c8765">FrameCallback</a>&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>userData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>打开数据流并通过回调函数返回帧数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">streamType</td><td>：需要打开的流类型， 见STREAM_TYPE </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>：需要打开的流格式信息, 可由getStreamInfos返回 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>: 返回帧数据的回调函数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">userData</td><td>: 用户数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a23f4cf583f519c56386d071a6b156de9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::ICamera::startStream </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a>&#160;</td>
+          <td class="paramname"><em>streamType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#struct_stream_info">StreamInfo</a>&#160;</td>
+          <td class="paramname"><em>info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>打开数据流并通过getFrame主动获取帧数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">streamType</td><td>：需要打开的流类型， 见STREAM_TYPE </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>：需要打开的流格式信息, 可由getStreamInfos返回 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a013d980184efa4a9cc2d2e08a7334c8b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::ICamera::stopStream </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a>&#160;</td>
+          <td class="paramname"><em>streamType</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>停止数据流 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">streamType</td><td>：需要停止的流类型， 见STREAM_TYPE </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a59a3589b7ea80fd5854b4ac0a08814f4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::ICamera::getFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a>&#160;</td>
+          <td class="paramname"><em>streamType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___frame.html#gaef9728e91022942cf396bbb7de90b619">IFramePtr</a> &amp;&#160;</td>
+          <td class="paramname"><em>frame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout_ms</em> = <code>5000</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>主动获取当前流输出的帧数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">streamType</td><td>：需要获取的流类型 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">frame</td><td>：返回帧数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout_ms</td><td>：超时时间，单位为毫秒 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa727b009550642ae2bf28f5c730e724c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::ICamera::softTrigger </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>count</em> = <code>1</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>软触发模式下触发N帧（暂时只支持1帧） </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">count</td><td>：触发帧数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac17701cfa543e860081d2851c9eb8382"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::ICamera::getPropertyRange </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a>&#160;</td>
+          <td class="paramname"><em>streamType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___property_type.html#ga59b796677c23b170285aaed0220587e4">PROPERTY_TYPE</a>&#160;</td>
+          <td class="paramname"><em>propertyType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>step</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取指定流的指定属性范围 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">streamType</td><td>：指定的数据流类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">propertyType</td><td>：属性类型 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">min</td><td>：属性的最小值 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">max</td><td>：属性的最大值 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">step</td><td>：属性调整时的建议调节步进 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9bbae59b0a6c219621aa8c0fb1f2efd8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::ICamera::getProperty </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a>&#160;</td>
+          <td class="paramname"><em>streamType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___property_type.html#ga59b796677c23b170285aaed0220587e4">PROPERTY_TYPE</a>&#160;</td>
+          <td class="paramname"><em>propertyType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取指定流的属性值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">streamType</td><td>：指定的数据流类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">propertyType</td><td>：属性类型 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">value</td><td>：属性当前值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3abda0dfd1ee522d7542dd374f003814"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::ICamera::setProperty </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a>&#160;</td>
+          <td class="paramname"><em>streamType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___property_type.html#ga59b796677c23b170285aaed0220587e4">PROPERTY_TYPE</a>&#160;</td>
+          <td class="paramname"><em>propertyType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>修改指定流的属性值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">streamType</td><td>：指定的数据流类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">propertyType</td><td>：属性类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>：需要设置的属性值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a47e88d1a38c180306073baa79071fe02"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::ICamera::setPropertyExtension </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___property_extension_type.html#ga7e837ea99fe20433296bf5140b06d512">PROPERTY_TYPE_EXTENSION</a>&#160;</td>
+          <td class="paramname"><em>propertyType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#union_property_extension">PropertyExtension</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>修改扩展属性值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">propertyType</td><td>：属性类型 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>：需要设置的属性值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a837e2f6f6cf12c56618aeb4b5055b758"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::ICamera::getPropertyExtension </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___property_extension_type.html#ga7e837ea99fe20433296bf5140b06d512">PROPERTY_TYPE_EXTENSION</a>&#160;</td>
+          <td class="paramname"><em>propertyType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#union_property_extension">PropertyExtension</a> &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取扩展属性的当前值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">propertyType</td><td>：属性类型 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">value</td><td>：返回的值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a95139a9e5fca04368cfd36c0ff6a1637"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::ICamera::getIntrinsics </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a>&#160;</td>
+          <td class="paramname"><em>streamType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#struct_intrinsics">Intrinsics</a> &amp;&#160;</td>
+          <td class="paramname"><em>intrinsics</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取指定类型数据流的内参 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">streamType</td><td>：指定的数据流类型 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">intrinsics</td><td>：返回内参 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a26e77922ed50b8ceaf2744104be2e56c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::ICamera::getExtrinsics </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#struct_extrinsics">Extrinsics</a> &amp;&#160;</td>
+          <td class="paramname"><em>extrinsics</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取从深度流到RGB流的旋转平移参数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">extrinsics</td><td>：返回外参 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aee4376d986f078f492a87e813319d9f1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::ICamera::getDistort </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a>&#160;</td>
+          <td class="paramname"><em>streamType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#struct_distort">Distort</a> &amp;&#160;</td>
+          <td class="paramname"><em>distort</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取指定类型数据流的畸变参数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">streamType</td><td>：指定的数据流类型 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">distort</td><td>：返回内参 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a36292d672c5096a34c0b25bb2dccada5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::ICamera::restart </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重启相机 </p>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac7c6f614e2311a84bd3ad31c4d1eb24f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::ICamera::setUserData </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>userData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>写入用户自定义数据，长度必须要小于1024字节 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">userData</td><td>：写入数据指针 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>：写入数据长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a735afd0f82d03d1e68651e3110bd90ff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> cs::ICamera::getUserData </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>userData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>读取用户自定义数据，长度必须要小于1024字节 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">userData</td><td>：保存数据区的指针 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">length</td><td>：返回数据长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:SUCCESS, 失败:其他错误码 </dd></dl>
+
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">类型定义说明</h2>
+<a class="anchor" id="gae4d6502eec55bde8acf3989c801c8765"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* cs::FrameCallback) (IFramePtr frame, void *usrData)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_camera_8hpp.html">hpp/Camera.hpp</a>&gt;</code></p>
+
+<p>获得帧数据回调函数 </p>
+
+</div>
+</div>
+<a class="anchor" id="ga21d13702164dc7a0eb742c1c85a55268"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::shared_ptr&lt;ICamera&gt; <a class="el" href="group___camera.html#ga21d13702164dc7a0eb742c1c85a55268">cs::ICameraPtr</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_camera_8hpp.html">hpp/Camera.hpp</a>&gt;</code></p>
+
+<p>相机对象的共享指针 </p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="ga24c8a4913384c5656c3ac466ed7715cf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> ICameraPtr cs::getCameraPtr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_camera_8hpp.html">hpp/Camera.hpp</a>&gt;</code></p>
+<dl><dt><b>示例: </b></dt><dd><a class="el" href="_sample_hand_eye_8cpp-example.html#a17">SampleHandEye.cpp</a>, <a class="el" href="_sample_h_d_r_8cpp-example.html#a6">SampleHDR.cpp</a>, <a class="el" href="_sample_live_depth_callback_8cpp-example.html#a6">SampleLiveDepthCallback.cpp</a>, <a class="el" href="_sample_live_depth_i_r_callback_8cpp-example.html#a8">SampleLiveDepthIRCallback.cpp</a>, <a class="el" href="_sample_live_depth_manual_query_8cpp-example.html#a0">SampleLiveDepthManualQuery.cpp</a>, <a class="el" href="_sample_live_rgb_auto_exposure_8cpp-example.html#a0">SampleLiveRgbAutoExposure.cpp</a>, <a class="el" href="_sample_live_rgb_callback_8cpp-example.html#a0">SampleLiveRgbCallback.cpp</a>, <a class="el" href="_sample_live_rgb_manual_query_8cpp-example.html#a0">SampleLiveRgbManualQuery.cpp</a>, <a class="el" href="_sample_multi_camera_8cpp-example.html#a2">SampleMultiCamera.cpp</a>, <a class="el" href="_sample_point_reconstruction_8cpp-example.html#a0">SamplePointReconstruction.cpp</a>, <a class="el" href="_sample_set_and_get_user_data_8cpp-example.html#a0">SampleSetAndGetUserData.cpp</a> , 以及 <a class="el" href="_sample_soft_trigger_8cpp-example.html#a6">SampleSoftTrigger.cpp</a>.</dd>
+</dl>
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

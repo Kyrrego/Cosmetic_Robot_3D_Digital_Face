@@ -1,0 +1,1443 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>3DCamera: 深度图后处理</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">3DCamera
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+      <li><a href="examples.html"><span>示例</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#namespaces">命名空间</a> &#124;
+<a href="#nested-classes">类</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">深度图后处理</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>深度图后处理接口  
+<a href="#details">更多...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+命名空间</h2></td></tr>
+<tr class="memitem:namespacecs_1_1filter"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecs_1_1filter.html">cs::filter</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:classcs_1_1_pointcloud"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#classcs_1_1_pointcloud">cs::Pointcloud</a></td></tr>
+<tr class="memdesc:classcs_1_1_pointcloud"><td class="mdescLeft">&#160;</td><td class="mdescRight">点云类  <a href="group___process.html#classcs_1_1_pointcloud">更多...</a><br /></td></tr>
+<tr class="separator:classcs_1_1_pointcloud"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:classcs_1_1_pointcloud_with_mesh"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#classcs_1_1_pointcloud_with_mesh">cs::PointcloudWithMesh</a></td></tr>
+<tr class="separator:classcs_1_1_pointcloud_with_mesh"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:classcs_1_1colorizer"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#classcs_1_1colorizer">cs::colorizer</a></td></tr>
+<tr class="memdesc:classcs_1_1colorizer"><td class="mdescLeft">&#160;</td><td class="mdescRight">将深度图转换为RGB图  <a href="group___process.html#classcs_1_1colorizer">更多...</a><br /></td></tr>
+<tr class="separator:classcs_1_1colorizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:gac3b2303e69d8eca4731664621a122a98"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#gac3b2303e69d8eca4731664621a122a98">cs::saveTexture</a> (const char *data, int width, int height, int channel, const char *filename)</td></tr>
+<tr class="separator:gac3b2303e69d8eca4731664621a122a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<p>深度图后处理接口 </p>
+<hr/><h2 class="groupheader">类说明</h2>
+<a name="classcs_1_1_pointcloud" id="classcs_1_1_pointcloud"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">class cs::Pointcloud</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>点云类 </p>
+<dl><dt><b>示例: </b></dt><dd><a class="el" href="_sample_point_reconstruction_8cpp-example.html#_a15">SamplePointReconstruction.cpp</a>.</dd>
+</dl></div><div class="dynheader">
+类 cs::Pointcloud 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="group___process.png" usemap="#cs::Pointcloud_map" alt=""/>
+  <map id="cs::Pointcloud_map" name="cs::Pointcloud_map">
+<area href="group___process.html#classcs_1_1_pointcloud_with_mesh" alt="cs::PointcloudWithMesh" shape="rect" coords="0,56,145,80"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr><td colspan="2"><h3>Public 成员函数</h3></td></tr>
+<tr class="memitem:a38a08cd620ab686a9dd97a591db32e1f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a38a08cd620ab686a9dd97a591db32e1f">Pointcloud</a> ()</td></tr>
+<tr class="separator:a38a08cd620ab686a9dd97a591db32e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a859769e4c58e9763b448d5cfb6addaf5"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a859769e4c58e9763b448d5cfb6addaf5">~Pointcloud</a> ()</td></tr>
+<tr class="separator:a859769e4c58e9763b448d5cfb6addaf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbee8388f8b5d2451d839df73de638c2"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:abbee8388f8b5d2451d839df73de638c2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___process.html#abbee8388f8b5d2451d839df73de638c2">generatePoints</a> (T *depthMap, int width, int height, float depthScale, <a class="el" href="_types_8hpp.html#struct_intrinsics">Intrinsics</a> *intrinsicsDepth, <a class="el" href="_types_8hpp.html#struct_intrinsics">Intrinsics</a> *intrinsicsRgb, <a class="el" href="_types_8hpp.html#struct_extrinsics">Extrinsics</a> *extrinsics, bool removeInvalid=false)</td></tr>
+<tr class="memdesc:abbee8388f8b5d2451d839df73de638c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">将深度图计算为点云  <a href="#abbee8388f8b5d2451d839df73de638c2">更多...</a><br /></td></tr>
+<tr class="separator:abbee8388f8b5d2451d839df73de638c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1151ca51ee4d5d1931b2227adae27a5c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a1151ca51ee4d5d1931b2227adae27a5c">generateTextureToDepthMap</a> (int depthWidth, int depthHeight, std::map&lt; int, int &gt; &amp;rgbToDepth)</td></tr>
+<tr class="memdesc:a1151ca51ee4d5d1931b2227adae27a5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成rgb图像（转换到深度图大小）位置到深度图位置的映射表 @ 必须先调用generatePoints，传入rgb相机的参数，且removeInvalid设置为false生成纹理坐标，否则返回失败  <a href="#a1151ca51ee4d5d1931b2227adae27a5c">更多...</a><br /></td></tr>
+<tr class="separator:a1151ca51ee4d5d1931b2227adae27a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2456683b8bffc8b9211c10c19836a04b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a2456683b8bffc8b9211c10c19836a04b">getDepthCoordFromMap</a> (std::map&lt; int, int &gt; &amp;rgbToDepth, int rgbX, int rgbY, int rgbWidth, int rgbHeight, int depthWidth, int depthHeight, int &amp;depthX, int &amp;depthY)</td></tr>
+<tr class="memdesc:a2456683b8bffc8b9211c10c19836a04b"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算rgb坐标对应的深度图坐标 @ 必须先调用generateTextureToDepthMap生成map表  <a href="#a2456683b8bffc8b9211c10c19836a04b">更多...</a><br /></td></tr>
+<tr class="separator:a2456683b8bffc8b9211c10c19836a04b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa50944265918e0036e6772ff786fbe34"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#aa50944265918e0036e6772ff786fbe34">generatePointsFromCenterZ</a> (float *data, int width, int height, <a class="el" href="_types_8hpp.html#struct_intrinsics">Intrinsics</a> *intrinsicsDepth, <a class="el" href="_types_8hpp.html#struct_intrinsics">Intrinsics</a> *intrinsicsRgb=nullptr, <a class="el" href="_types_8hpp.html#struct_extrinsics">Extrinsics</a> *extrinsics=nullptr)</td></tr>
+<tr class="memdesc:aa50944265918e0036e6772ff786fbe34"><td class="mdescLeft">&#160;</td><td class="mdescRight">将深度图+光刀中心图的数据转换为点云  <a href="#aa50944265918e0036e6772ff786fbe34">更多...</a><br /></td></tr>
+<tr class="separator:aa50944265918e0036e6772ff786fbe34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12778c00537f18d6f6e47bacbad9f1db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a12778c00537f18d6f6e47bacbad9f1db">generatePointsFromXZ</a> (float *data, int width, bool removeInvalid=false)</td></tr>
+<tr class="separator:a12778c00537f18d6f6e47bacbad9f1db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1caac959a88384e562390ae88dfbd8e5"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a1caac959a88384e562390ae88dfbd8e5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___process.html#a1caac959a88384e562390ae88dfbd8e5">generatePoint</a> (<a class="el" href="structfloat3.html">float3</a> &amp;vertex, <a class="el" href="structfloat2.html">float2</a> &amp;textureCoord, int u, int v, T depth, int width, int height, float depthScale, <a class="el" href="_types_8hpp.html#struct_intrinsics">Intrinsics</a> *intrinsicsDepth, <a class="el" href="_types_8hpp.html#struct_intrinsics">Intrinsics</a> *intrinsicsRgb=nullptr, <a class="el" href="_types_8hpp.html#struct_extrinsics">Extrinsics</a> *extrinsics=nullptr)</td></tr>
+<tr class="memdesc:a1caac959a88384e562390ae88dfbd8e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算深度图上的一个点  <a href="#a1caac959a88384e562390ae88dfbd8e5">更多...</a><br /></td></tr>
+<tr class="separator:a1caac959a88384e562390ae88dfbd8e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef0b2f5a6dc6a84d07e2deb35e47f88a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#aef0b2f5a6dc6a84d07e2deb35e47f88a">exportToFile</a> (const std::string &amp;filename, unsigned char *texture, int textureWidth, int textureHeight, bool binary=false)</td></tr>
+<tr class="memdesc:aef0b2f5a6dc6a84d07e2deb35e47f88a"><td class="mdescLeft">&#160;</td><td class="mdescRight">将点云数据导出到文件  <a href="#aef0b2f5a6dc6a84d07e2deb35e47f88a">更多...</a><br /></td></tr>
+<tr class="separator:aef0b2f5a6dc6a84d07e2deb35e47f88a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22a2c9e3a3bcebead90ba6c0947ff227"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a22a2c9e3a3bcebead90ba6c0947ff227">size</a> ()</td></tr>
+<tr class="memdesc:a22a2c9e3a3bcebead90ba6c0947ff227"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取总点数  <a href="#a22a2c9e3a3bcebead90ba6c0947ff227">更多...</a><br /></td></tr>
+<tr class="separator:a22a2c9e3a3bcebead90ba6c0947ff227"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa13398ef6121c39af056098684b63401"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#aa13398ef6121c39af056098684b63401">validSize</a> ()</td></tr>
+<tr class="memdesc:aa13398ef6121c39af056098684b63401"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取有效的点数  <a href="#aa13398ef6121c39af056098684b63401">更多...</a><br /></td></tr>
+<tr class="separator:aa13398ef6121c39af056098684b63401"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a6a8902dde4ba94d9f8e6e0dca086d6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structfloat3.html">float3</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a3a6a8902dde4ba94d9f8e6e0dca086d6">getVertices</a> ()</td></tr>
+<tr class="memdesc:a3a6a8902dde4ba94d9f8e6e0dca086d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取点云的顶点坐标  <a href="#a3a6a8902dde4ba94d9f8e6e0dca086d6">更多...</a><br /></td></tr>
+<tr class="separator:a3a6a8902dde4ba94d9f8e6e0dca086d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4444278ab0c03d7948f8344b9225fc9f"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structfloat2.html">float2</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a4444278ab0c03d7948f8344b9225fc9f">getTexcoords</a> ()</td></tr>
+<tr class="memdesc:a4444278ab0c03d7948f8344b9225fc9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取对应到RGB图像上的坐标(已归一化至0~1.f)，乘以RGB图像的分辨率即可得到绝对坐标值  <a href="#a4444278ab0c03d7948f8344b9225fc9f">更多...</a><br /></td></tr>
+<tr class="separator:a4444278ab0c03d7948f8344b9225fc9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a727de7d9840494393b0f6f15e1c0f105"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structfloat3.html">float3</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a727de7d9840494393b0f6f15e1c0f105">getNormals</a> ()</td></tr>
+<tr class="memdesc:a727de7d9840494393b0f6f15e1c0f105"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取法线  <a href="#a727de7d9840494393b0f6f15e1c0f105">更多...</a><br /></td></tr>
+<tr class="separator:a727de7d9840494393b0f6f15e1c0f105"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><h3>Protected 属性</h3></td></tr>
+<tr class="memitem:a970612308772c63c667d96eae5735cdd"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structfloat3.html">float3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a970612308772c63c667d96eae5735cdd">_points</a></td></tr>
+<tr class="separator:a970612308772c63c667d96eae5735cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a438e5300adcf77355e7190edc67a3477"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structfloat2.html">float2</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a438e5300adcf77355e7190edc67a3477">_textures</a></td></tr>
+<tr class="separator:a438e5300adcf77355e7190edc67a3477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46bd4c5895b6b629c01ef034b2a45cdf"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structfloat3.html">float3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a46bd4c5895b6b629c01ef034b2a45cdf">_normals</a></td></tr>
+<tr class="separator:a46bd4c5895b6b629c01ef034b2a45cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bc8f2979365723718fdbe55c03d40c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a1bc8f2979365723718fdbe55c03d40c4">_validSize</a></td></tr>
+<tr class="separator:a1bc8f2979365723718fdbe55c03d40c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">构造及析构函数说明</h4>
+<a class="anchor" id="a38a08cd620ab686a9dd97a591db32e1f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cs::Pointcloud::Pointcloud </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a859769e4c58e9763b448d5cfb6addaf5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual cs::Pointcloud::~Pointcloud </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h4 class="groupheader">成员函数说明</h4>
+<a class="anchor" id="abbee8388f8b5d2451d839df73de638c2"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cs::Pointcloud::generatePoints </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>depthMap</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>depthScale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#struct_intrinsics">Intrinsics</a> *&#160;</td>
+          <td class="paramname"><em>intrinsicsDepth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#struct_intrinsics">Intrinsics</a> *&#160;</td>
+          <td class="paramname"><em>intrinsicsRgb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#struct_extrinsics">Extrinsics</a> *&#160;</td>
+          <td class="paramname"><em>extrinsics</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>removeInvalid</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将深度图计算为点云 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">depthMap</td><td>深度图地址 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>深度图宽度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>深度图高度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">depthScale</td><td>深度数据的缩放系数,通过ICamera::getPropertyExtension(PROPERTY_EXT_DEPTH_SCALE, ...)获得 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">intrinsicsDepth</td><td>深度流的内参, 通过ICamera::getIntrinsic(STREAM_TYPE_DEPTH, ...)获得 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">intrinsicsRgb</td><td>RGB流内参,通过ICamera::getIntrinsics(STREAM_TYPE_RGB, ...)获得， @ 如果不带纹理则传入nullptr </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">extrinsics</td><td>深度流到RGB流的旋转平移矩阵, 通过ICamera::getExtrinsics获得 如果不带纹理则传入nullptr </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">removeInvalid</td><td>true: 移除无效点, false: 将无效点设置为(0,0,0) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>示例: </b></dt><dd><a class="el" href="_sample_point_reconstruction_8cpp-example.html#a21">SamplePointReconstruction.cpp</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a1151ca51ee4d5d1931b2227adae27a5c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cs::Pointcloud::generateTextureToDepthMap </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>depthWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>depthHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::map&lt; int, int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rgbToDepth</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>生成rgb图像（转换到深度图大小）位置到深度图位置的映射表 @ 必须先调用generatePoints，传入rgb相机的参数，且removeInvalid设置为false生成纹理坐标，否则返回失败 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">depthWidth</td><td>深度图宽度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">depthHeight</td><td>深度图高度 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">rgbToDepth</td><td>输出映射表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:true, 失败:false </dd></dl>
+<dl><dt><b>示例: </b></dt><dd><a class="el" href="_sample_point_reconstruction_8cpp-example.html#a23">SamplePointReconstruction.cpp</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a2456683b8bffc8b9211c10c19836a04b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cs::Pointcloud::getDepthCoordFromMap </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; int, int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rgbToDepth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rgbX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rgbY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rgbWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rgbHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>depthWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>depthHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>depthX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>depthY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算rgb坐标对应的深度图坐标 @ 必须先调用generateTextureToDepthMap生成map表 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">rgbToDepth</td><td>映射表 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rgbX</td><td>rgb图X坐标 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rgbY</td><td>rgb图Y坐标 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rgbWidth</td><td>rgb图宽度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rgbHeight</td><td>rgb图高度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">depthWidth</td><td>深度图宽度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">depthHeight</td><td>深度图高度 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">depthX</td><td>输出深度图X坐标 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">depthY</td><td>输出深度图Y坐标 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功:true, 失败:false </dd></dl>
+<dl><dt><b>示例: </b></dt><dd><a class="el" href="_sample_point_reconstruction_8cpp-example.html#a24">SamplePointReconstruction.cpp</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aa50944265918e0036e6772ff786fbe34"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cs::Pointcloud::generatePointsFromCenterZ </td>
+          <td>(</td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#struct_intrinsics">Intrinsics</a> *&#160;</td>
+          <td class="paramname"><em>intrinsicsDepth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#struct_intrinsics">Intrinsics</a> *&#160;</td>
+          <td class="paramname"><em>intrinsicsRgb</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#struct_extrinsics">Extrinsics</a> *&#160;</td>
+          <td class="paramname"><em>extrinsics</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将深度图+光刀中心图的数据转换为点云 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>数据起始地址 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>深度图宽度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>深度图高度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">intrinsicsDepth</td><td>深度流的内参, 通过ICamera::getIntrinsic(STREAM_TYPE_DEPTH, ...)获得 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">intrinsicsRgb</td><td>RGB流内参,通过ICamera::getIntrinsics(STREAM_TYPE_RGB, ...)获得， @ 如果不带纹理则传入nullptr </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">extrinsics</td><td>深度流到RGB流的旋转平移矩阵, 通过ICamera::getExtrinsics获得 如果不带纹理则传入nullptr </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a12778c00537f18d6f6e47bacbad9f1db"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cs::Pointcloud::generatePointsFromXZ </td>
+          <td>(</td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>removeInvalid</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>将STREAM_FORMAT_XZ32格式输出的帧数据转换为点云 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>数据指针 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>原始图像宽度 将STREAM_FORMAT_XZ32格式输出的帧数据转换为点云 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>数据指针 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>原始图像宽度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1caac959a88384e562390ae88dfbd8e5"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cs::Pointcloud::generatePoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfloat3.html">float3</a> &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structfloat2.html">float2</a> &amp;&#160;</td>
+          <td class="paramname"><em>textureCoord</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>u</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>depth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>depthScale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#struct_intrinsics">Intrinsics</a> *&#160;</td>
+          <td class="paramname"><em>intrinsicsDepth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#struct_intrinsics">Intrinsics</a> *&#160;</td>
+          <td class="paramname"><em>intrinsicsRgb</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#struct_extrinsics">Extrinsics</a> *&#160;</td>
+          <td class="paramname"><em>extrinsics</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算深度图上的一个点 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">vertex</td><td>返回顶点坐标 </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">textureCoord</td><td>返回RGB图像的映射坐标(已归一化至0~1.f)，乘以RGB图像的分辨率即可得到绝对坐标值 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">u</td><td>深度图上的列坐标 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>深度图上的行坐标 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">depth</td><td>深度图数据指针 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>深度图宽度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>深度图高度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">depthScale</td><td>深度图一个单位表示的物理长度（单位毫米） </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">intrinsicsDepth</td><td>深度流的内参, 通过ICamera::getIntrinsic(STREAM_TYPE_DEPTH, ...)获得 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">intrinsicsRgb</td><td>RGB流内参,通过ICamera::getIntrinsics(STREAM_TYPE_RGB, ...)获得， @ 如果不带纹理则传入nullptr </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">extrinsics</td><td>深度流到RGB流的旋转平移矩阵, 通过getExtrinsics获得 如果不带纹理则传入nullptr </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aef0b2f5a6dc6a84d07e2deb35e47f88a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void cs::Pointcloud::exportToFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>textureWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>textureHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>binary</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将点云数据导出到文件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>保存文件名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">texture</td><td>RGB图像的地址，如果不带颜色则传入空 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">textureWidth</td><td>RGB图像的宽度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">textureHeight</td><td>RGB图像的高度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">binary</td><td>数据格式, 二进制/文本 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>被 <a class="el" href="group___process.html#a47a71c882f9e12d832e3b28c3584b34d">cs::PointcloudWithMesh</a> 重载.</p>
+<dl><dt><b>示例: </b></dt><dd><a class="el" href="_sample_point_reconstruction_8cpp-example.html#a22">SamplePointReconstruction.cpp</a>.</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a22a2c9e3a3bcebead90ba6c0947ff227"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cs::Pointcloud::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取总点数 </p>
+
+</div>
+</div>
+<a class="anchor" id="aa13398ef6121c39af056098684b63401"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cs::Pointcloud::validSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取有效的点数 </p>
+
+</div>
+</div>
+<a class="anchor" id="a3a6a8902dde4ba94d9f8e6e0dca086d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structfloat3.html">float3</a>&gt;&amp; cs::Pointcloud::getVertices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取点云的顶点坐标 </p>
+
+</div>
+</div>
+<a class="anchor" id="a4444278ab0c03d7948f8344b9225fc9f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structfloat2.html">float2</a>&gt;&amp; cs::Pointcloud::getTexcoords </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取对应到RGB图像上的坐标(已归一化至0~1.f)，乘以RGB图像的分辨率即可得到绝对坐标值 </p>
+
+</div>
+</div>
+<a class="anchor" id="a727de7d9840494393b0f6f15e1c0f105"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structfloat3.html">float3</a>&gt;&amp; cs::Pointcloud::getNormals </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取法线 </p>
+
+</div>
+</div>
+<h4 class="groupheader">类成员变量说明</h4>
+<a class="anchor" id="a970612308772c63c667d96eae5735cdd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structfloat3.html">float3</a>&gt; cs::Pointcloud::_points</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a438e5300adcf77355e7190edc67a3477"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structfloat2.html">float2</a>&gt; cs::Pointcloud::_textures</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a46bd4c5895b6b629c01ef034b2a45cdf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structfloat3.html">float3</a>&gt; cs::Pointcloud::_normals</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a1bc8f2979365723718fdbe55c03d40c4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cs::Pointcloud::_validSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+
+</div>
+</div>
+<a name="classcs_1_1_pointcloud_with_mesh" id="classcs_1_1_pointcloud_with_mesh"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">class cs::PointcloudWithMesh</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"></div><div class="dynheader">
+类 cs::PointcloudWithMesh 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="group___process.png" usemap="#cs::PointcloudWithMesh_map" alt=""/>
+  <map id="cs::PointcloudWithMesh_map" name="cs::PointcloudWithMesh_map">
+<area href="group___process.html#classcs_1_1_pointcloud" title="点云类 " alt="cs::Pointcloud" shape="rect" coords="0,0,145,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr><td colspan="2"><h3>Public 成员函数</h3></td></tr>
+<tr class="memitem:a8b87fdd21dfb0f77fdc782e24332e30a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a8b87fdd21dfb0f77fdc782e24332e30a">PointcloudWithMesh</a> ()</td></tr>
+<tr class="separator:a8b87fdd21dfb0f77fdc782e24332e30a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ee6c50abe7be60b759e02b9dd5000ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a7ee6c50abe7be60b759e02b9dd5000ba">~PointcloudWithMesh</a> ()</td></tr>
+<tr class="separator:a7ee6c50abe7be60b759e02b9dd5000ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee0d05288424c8b850492bd28fea1c7d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structint3.html">int3</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#aee0d05288424c8b850492bd28fea1c7d">getFaces</a> ()</td></tr>
+<tr class="separator:aee0d05288424c8b850492bd28fea1c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47a71c882f9e12d832e3b28c3584b34d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a47a71c882f9e12d832e3b28c3584b34d">exportToFile</a> (const std::string &amp;filename, unsigned char *texture, int textureWidth, int textureHeight, bool binary)</td></tr>
+<tr class="memdesc:a47a71c882f9e12d832e3b28c3584b34d"><td class="mdescLeft">&#160;</td><td class="mdescRight">将点云数据导出到文件  <a href="#a47a71c882f9e12d832e3b28c3584b34d">更多...</a><br /></td></tr>
+<tr class="separator:a47a71c882f9e12d832e3b28c3584b34d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c00afd6c8c5312ad8ac5a5a3c6f7edf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a5c00afd6c8c5312ad8ac5a5a3c6f7edf">insertPoints</a> (<a class="el" href="structfloat3.html">float3</a> *points, <a class="el" href="structfloat3.html">float3</a> *normals, int width, int height, <a class="el" href="_types_8hpp.html#struct_extrinsics">Extrinsics</a> *extrinsics, <a class="el" href="_types_8hpp.html#struct_intrinsics">Intrinsics</a> *intrinsicsRgb, bool removeInvalid)</td></tr>
+<tr class="separator:a5c00afd6c8c5312ad8ac5a5a3c6f7edf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_group___process"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_group___process')"><img src="closed.png" alt="-"/>&#160;Public 成员函数 继承自 <a class="el" href="group___process.html#classcs_1_1_pointcloud">cs::Pointcloud</a></td></tr>
+<tr class="memitem:a38a08cd620ab686a9dd97a591db32e1f inherit pub_methods_group___process"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a38a08cd620ab686a9dd97a591db32e1f">Pointcloud</a> ()</td></tr>
+<tr class="separator:a38a08cd620ab686a9dd97a591db32e1f inherit pub_methods_group___process"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a859769e4c58e9763b448d5cfb6addaf5 inherit pub_methods_group___process"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a859769e4c58e9763b448d5cfb6addaf5">~Pointcloud</a> ()</td></tr>
+<tr class="separator:a859769e4c58e9763b448d5cfb6addaf5 inherit pub_methods_group___process"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbee8388f8b5d2451d839df73de638c2 inherit pub_methods_group___process"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:abbee8388f8b5d2451d839df73de638c2 inherit pub_methods_group___process"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___process.html#abbee8388f8b5d2451d839df73de638c2">generatePoints</a> (T *depthMap, int width, int height, float depthScale, <a class="el" href="_types_8hpp.html#struct_intrinsics">Intrinsics</a> *intrinsicsDepth, <a class="el" href="_types_8hpp.html#struct_intrinsics">Intrinsics</a> *intrinsicsRgb, <a class="el" href="_types_8hpp.html#struct_extrinsics">Extrinsics</a> *extrinsics, bool removeInvalid=false)</td></tr>
+<tr class="memdesc:abbee8388f8b5d2451d839df73de638c2 inherit pub_methods_group___process"><td class="mdescLeft">&#160;</td><td class="mdescRight">将深度图计算为点云  <a href="#abbee8388f8b5d2451d839df73de638c2">更多...</a><br /></td></tr>
+<tr class="separator:abbee8388f8b5d2451d839df73de638c2 inherit pub_methods_group___process"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1151ca51ee4d5d1931b2227adae27a5c inherit pub_methods_group___process"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a1151ca51ee4d5d1931b2227adae27a5c">generateTextureToDepthMap</a> (int depthWidth, int depthHeight, std::map&lt; int, int &gt; &amp;rgbToDepth)</td></tr>
+<tr class="memdesc:a1151ca51ee4d5d1931b2227adae27a5c inherit pub_methods_group___process"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成rgb图像（转换到深度图大小）位置到深度图位置的映射表 @ 必须先调用generatePoints，传入rgb相机的参数，且removeInvalid设置为false生成纹理坐标，否则返回失败  <a href="#a1151ca51ee4d5d1931b2227adae27a5c">更多...</a><br /></td></tr>
+<tr class="separator:a1151ca51ee4d5d1931b2227adae27a5c inherit pub_methods_group___process"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2456683b8bffc8b9211c10c19836a04b inherit pub_methods_group___process"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a2456683b8bffc8b9211c10c19836a04b">getDepthCoordFromMap</a> (std::map&lt; int, int &gt; &amp;rgbToDepth, int rgbX, int rgbY, int rgbWidth, int rgbHeight, int depthWidth, int depthHeight, int &amp;depthX, int &amp;depthY)</td></tr>
+<tr class="memdesc:a2456683b8bffc8b9211c10c19836a04b inherit pub_methods_group___process"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算rgb坐标对应的深度图坐标 @ 必须先调用generateTextureToDepthMap生成map表  <a href="#a2456683b8bffc8b9211c10c19836a04b">更多...</a><br /></td></tr>
+<tr class="separator:a2456683b8bffc8b9211c10c19836a04b inherit pub_methods_group___process"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa50944265918e0036e6772ff786fbe34 inherit pub_methods_group___process"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#aa50944265918e0036e6772ff786fbe34">generatePointsFromCenterZ</a> (float *data, int width, int height, <a class="el" href="_types_8hpp.html#struct_intrinsics">Intrinsics</a> *intrinsicsDepth, <a class="el" href="_types_8hpp.html#struct_intrinsics">Intrinsics</a> *intrinsicsRgb=nullptr, <a class="el" href="_types_8hpp.html#struct_extrinsics">Extrinsics</a> *extrinsics=nullptr)</td></tr>
+<tr class="memdesc:aa50944265918e0036e6772ff786fbe34 inherit pub_methods_group___process"><td class="mdescLeft">&#160;</td><td class="mdescRight">将深度图+光刀中心图的数据转换为点云  <a href="#aa50944265918e0036e6772ff786fbe34">更多...</a><br /></td></tr>
+<tr class="separator:aa50944265918e0036e6772ff786fbe34 inherit pub_methods_group___process"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12778c00537f18d6f6e47bacbad9f1db inherit pub_methods_group___process"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a12778c00537f18d6f6e47bacbad9f1db">generatePointsFromXZ</a> (float *data, int width, bool removeInvalid=false)</td></tr>
+<tr class="separator:a12778c00537f18d6f6e47bacbad9f1db inherit pub_methods_group___process"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1caac959a88384e562390ae88dfbd8e5 inherit pub_methods_group___process"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a1caac959a88384e562390ae88dfbd8e5 inherit pub_methods_group___process"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___process.html#a1caac959a88384e562390ae88dfbd8e5">generatePoint</a> (<a class="el" href="structfloat3.html">float3</a> &amp;vertex, <a class="el" href="structfloat2.html">float2</a> &amp;textureCoord, int u, int v, T depth, int width, int height, float depthScale, <a class="el" href="_types_8hpp.html#struct_intrinsics">Intrinsics</a> *intrinsicsDepth, <a class="el" href="_types_8hpp.html#struct_intrinsics">Intrinsics</a> *intrinsicsRgb=nullptr, <a class="el" href="_types_8hpp.html#struct_extrinsics">Extrinsics</a> *extrinsics=nullptr)</td></tr>
+<tr class="memdesc:a1caac959a88384e562390ae88dfbd8e5 inherit pub_methods_group___process"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算深度图上的一个点  <a href="#a1caac959a88384e562390ae88dfbd8e5">更多...</a><br /></td></tr>
+<tr class="separator:a1caac959a88384e562390ae88dfbd8e5 inherit pub_methods_group___process"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22a2c9e3a3bcebead90ba6c0947ff227 inherit pub_methods_group___process"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a22a2c9e3a3bcebead90ba6c0947ff227">size</a> ()</td></tr>
+<tr class="memdesc:a22a2c9e3a3bcebead90ba6c0947ff227 inherit pub_methods_group___process"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取总点数  <a href="#a22a2c9e3a3bcebead90ba6c0947ff227">更多...</a><br /></td></tr>
+<tr class="separator:a22a2c9e3a3bcebead90ba6c0947ff227 inherit pub_methods_group___process"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa13398ef6121c39af056098684b63401 inherit pub_methods_group___process"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#aa13398ef6121c39af056098684b63401">validSize</a> ()</td></tr>
+<tr class="memdesc:aa13398ef6121c39af056098684b63401 inherit pub_methods_group___process"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取有效的点数  <a href="#aa13398ef6121c39af056098684b63401">更多...</a><br /></td></tr>
+<tr class="separator:aa13398ef6121c39af056098684b63401 inherit pub_methods_group___process"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a6a8902dde4ba94d9f8e6e0dca086d6 inherit pub_methods_group___process"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structfloat3.html">float3</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a3a6a8902dde4ba94d9f8e6e0dca086d6">getVertices</a> ()</td></tr>
+<tr class="memdesc:a3a6a8902dde4ba94d9f8e6e0dca086d6 inherit pub_methods_group___process"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取点云的顶点坐标  <a href="#a3a6a8902dde4ba94d9f8e6e0dca086d6">更多...</a><br /></td></tr>
+<tr class="separator:a3a6a8902dde4ba94d9f8e6e0dca086d6 inherit pub_methods_group___process"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4444278ab0c03d7948f8344b9225fc9f inherit pub_methods_group___process"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structfloat2.html">float2</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a4444278ab0c03d7948f8344b9225fc9f">getTexcoords</a> ()</td></tr>
+<tr class="memdesc:a4444278ab0c03d7948f8344b9225fc9f inherit pub_methods_group___process"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取对应到RGB图像上的坐标(已归一化至0~1.f)，乘以RGB图像的分辨率即可得到绝对坐标值  <a href="#a4444278ab0c03d7948f8344b9225fc9f">更多...</a><br /></td></tr>
+<tr class="separator:a4444278ab0c03d7948f8344b9225fc9f inherit pub_methods_group___process"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a727de7d9840494393b0f6f15e1c0f105 inherit pub_methods_group___process"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structfloat3.html">float3</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a727de7d9840494393b0f6f15e1c0f105">getNormals</a> ()</td></tr>
+<tr class="memdesc:a727de7d9840494393b0f6f15e1c0f105 inherit pub_methods_group___process"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取法线  <a href="#a727de7d9840494393b0f6f15e1c0f105">更多...</a><br /></td></tr>
+<tr class="separator:a727de7d9840494393b0f6f15e1c0f105 inherit pub_methods_group___process"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+额外继承的成员函数</h2></td></tr>
+<tr class="inherit_header pro_attribs_group___process"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_group___process')"><img src="closed.png" alt="-"/>&#160;Protected 属性 继承自 <a class="el" href="group___process.html#classcs_1_1_pointcloud">cs::Pointcloud</a></td></tr>
+<tr class="memitem:a970612308772c63c667d96eae5735cdd inherit pro_attribs_group___process"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structfloat3.html">float3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a970612308772c63c667d96eae5735cdd">_points</a></td></tr>
+<tr class="separator:a970612308772c63c667d96eae5735cdd inherit pro_attribs_group___process"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a438e5300adcf77355e7190edc67a3477 inherit pro_attribs_group___process"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structfloat2.html">float2</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a438e5300adcf77355e7190edc67a3477">_textures</a></td></tr>
+<tr class="separator:a438e5300adcf77355e7190edc67a3477 inherit pro_attribs_group___process"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46bd4c5895b6b629c01ef034b2a45cdf inherit pro_attribs_group___process"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structfloat3.html">float3</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a46bd4c5895b6b629c01ef034b2a45cdf">_normals</a></td></tr>
+<tr class="separator:a46bd4c5895b6b629c01ef034b2a45cdf inherit pro_attribs_group___process"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bc8f2979365723718fdbe55c03d40c4 inherit pro_attribs_group___process"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a1bc8f2979365723718fdbe55c03d40c4">_validSize</a></td></tr>
+<tr class="separator:a1bc8f2979365723718fdbe55c03d40c4 inherit pro_attribs_group___process"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">构造及析构函数说明</h4>
+<a class="anchor" id="a8b87fdd21dfb0f77fdc782e24332e30a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cs::PointcloudWithMesh::PointcloudWithMesh </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7ee6c50abe7be60b759e02b9dd5000ba"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cs::PointcloudWithMesh::~PointcloudWithMesh </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h4 class="groupheader">成员函数说明</h4>
+<a class="anchor" id="aee0d05288424c8b850492bd28fea1c7d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="structint3.html">int3</a>&gt;&amp; cs::PointcloudWithMesh::getFaces </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a47a71c882f9e12d832e3b28c3584b34d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cs::PointcloudWithMesh::exportToFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>textureWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>textureHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>binary</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将点云数据导出到文件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>保存文件名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">texture</td><td>RGB图像的地址，如果不带颜色则传入空 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">textureWidth</td><td>RGB图像的宽度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">textureHeight</td><td>RGB图像的高度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">binary</td><td>数据格式, 二进制/文本 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>重载 <a class="el" href="group___process.html#aef0b2f5a6dc6a84d07e2deb35e47f88a">cs::Pointcloud</a> .</p>
+
+</div>
+</div>
+<a class="anchor" id="a5c00afd6c8c5312ad8ac5a5a3c6f7edf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cs::PointcloudWithMesh::insertPoints </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfloat3.html">float3</a> *&#160;</td>
+          <td class="paramname"><em>points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structfloat3.html">float3</a> *&#160;</td>
+          <td class="paramname"><em>normals</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#struct_extrinsics">Extrinsics</a> *&#160;</td>
+          <td class="paramname"><em>extrinsics</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#struct_intrinsics">Intrinsics</a> *&#160;</td>
+          <td class="paramname"><em>intrinsicsRgb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>removeInvalid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>重载 <a class="el" href="group___process.html">cs::Pointcloud</a> .</p>
+
+</div>
+</div>
+
+</div>
+</div>
+<a name="classcs_1_1colorizer" id="classcs_1_1colorizer"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">class cs::colorizer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>将深度图转换为RGB图 </p>
+<dl><dt><b>示例: </b></dt><dd><a class="el" href="_sample_h_d_r_8cpp-example.html#_a0">SampleHDR.cpp</a>, <a class="el" href="_sample_live_depth_callback_8cpp-example.html#_a0">SampleLiveDepthCallback.cpp</a>, <a class="el" href="_sample_live_depth_i_r_callback_8cpp-example.html#_a2">SampleLiveDepthIRCallback.cpp</a>, <a class="el" href="_sample_live_depth_manual_query_8cpp-example.html#_a12">SampleLiveDepthManualQuery.cpp</a>, <a class="el" href="_sample_point_reconstruction_8cpp-example.html#_a18">SamplePointReconstruction.cpp</a> , 以及 <a class="el" href="_sample_soft_trigger_8cpp-example.html#_a0">SampleSoftTrigger.cpp</a>.</dd>
+</dl></div><table class="memberdecls">
+<tr><td colspan="2"><h3>Public 成员函数</h3></td></tr>
+<tr class="memitem:a687b6bbb0ac91fbfac49f948e69628ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a687b6bbb0ac91fbfac49f948e69628ca">colorizer</a> ()</td></tr>
+<tr class="separator:a687b6bbb0ac91fbfac49f948e69628ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d9e955b3eca2c5935d9ea155db9ca6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___process.html#a8d9e955b3eca2c5935d9ea155db9ca6b">setRange</a> (int zmin, int zmax)</td></tr>
+<tr class="memdesc:a8d9e955b3eca2c5935d9ea155db9ca6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置渲染色带对应的最大深度值和最小深度值  <a href="#a8d9e955b3eca2c5935d9ea155db9ca6b">更多...</a><br /></td></tr>
+<tr class="separator:a8d9e955b3eca2c5935d9ea155db9ca6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dadb9f02a7b759d026077335bf7ae9c"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a3dadb9f02a7b759d026077335bf7ae9c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group___process.html#a3dadb9f02a7b759d026077335bf7ae9c">process</a> (T *depthData, float scale, unsigned char *rgbData, int dataSize)</td></tr>
+<tr class="memdesc:a3dadb9f02a7b759d026077335bf7ae9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">将深度图转换为RGB图  <a href="#a3dadb9f02a7b759d026077335bf7ae9c">更多...</a><br /></td></tr>
+<tr class="separator:a3dadb9f02a7b759d026077335bf7ae9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h4 class="groupheader">构造及析构函数说明</h4>
+<a class="anchor" id="a687b6bbb0ac91fbfac49f948e69628ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">cs::colorizer::colorizer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h4 class="groupheader">成员函数说明</h4>
+<a class="anchor" id="a8d9e955b3eca2c5935d9ea155db9ca6b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cs::colorizer::setRange </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>zmin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>zmax</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置渲染色带对应的最大深度值和最小深度值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">zmin</td><td>：最小深度值 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">zmax</td><td>：最大深度值 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3dadb9f02a7b759d026077335bf7ae9c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cs::colorizer::process </td>
+          <td>(</td>
+          <td class="paramtype">T *&#160;</td>
+          <td class="paramname"><em>depthData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>scale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>rgbData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dataSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>将深度图转换为RGB图 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">depthData</td><td>：深度数据 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">scale</td><td>：深度缩放系数 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rgbData</td><td>：RGB数据保存地址 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dataSize</td><td>：元素总数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>示例: </b></dt><dd><a class="el" href="_sample_h_d_r_8cpp-example.html#a4">SampleHDR.cpp</a>, <a class="el" href="_sample_live_depth_callback_8cpp-example.html#a4">SampleLiveDepthCallback.cpp</a>, <a class="el" href="_sample_live_depth_i_r_callback_8cpp-example.html#a6">SampleLiveDepthIRCallback.cpp</a>, <a class="el" href="_sample_live_depth_manual_query_8cpp-example.html#a16">SampleLiveDepthManualQuery.cpp</a>, <a class="el" href="_sample_point_reconstruction_8cpp-example.html#a19">SamplePointReconstruction.cpp</a> , 以及 <a class="el" href="_sample_soft_trigger_8cpp-example.html#a4">SampleSoftTrigger.cpp</a>.</dd>
+</dl>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a class="anchor" id="gac3b2303e69d8eca4731664621a122a98"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool cs::saveTexture </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_processing_8hpp.html">hpp/Processing.hpp</a>&gt;</code></p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>

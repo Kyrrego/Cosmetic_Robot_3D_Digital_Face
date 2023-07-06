@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>3DCamera: hpp/Camera.hpp 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">3DCamera
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="pages.html"><span>相关页面</span></a></li>
+      <li><a href="modules.html"><span>模块</span></a></li>
+      <li><a href="namespaces.html"><span>命名空间</span></a></li>
+      <li><a href="annotated.html"><span>类</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+      <li><a href="examples.html"><span>示例</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>文件成员</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_2a1119d2a4e2dac6dfac4a03c074f009.html">hpp</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Camera.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_camera_8hpp.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; <span class="comment">/*****************************************************************************</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">*  3DCamera SDK header</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">*  @file     Camera.hpp</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">*  @brief    3DCamera sdk header</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">*  @version  1.0</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">*  @date     2019 / 08 / 17</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">*</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">*****************************************************************************/</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef __CAMERA_HPP__</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define __CAMERA_HPP__</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_frame_8hpp.html">Frame.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_a_p_i_export_8hpp.html">APIExport.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="namespacecs.html">   20</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecs.html">cs</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">class </span><a class="code" href="group___camera.html#classcs_1_1_i_camera">ICamera</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="group___camera.html#gae4d6502eec55bde8acf3989c801c8765">   41</a></span>&#160;<span class="keyword">typedef</span> void (*<a class="code" href="group___camera.html#gae4d6502eec55bde8acf3989c801c8765">FrameCallback</a>)(<a class="code" href="group___frame.html#gaef9728e91022942cf396bbb7de90b619">IFramePtr</a> frame, <span class="keywordtype">void</span> *usrData);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="group___camera.html#ga21d13702164dc7a0eb742c1c85a55268">   49</a></span>&#160;<span class="keyword">typedef</span> std::shared_ptr&lt;ICamera&gt; <a class="code" href="group___camera.html#ga21d13702164dc7a0eb742c1c85a55268">ICameraPtr</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="group___camera.html">   57</a></span>&#160;<span class="keyword">class </span><a class="code" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> <a class="code" href="group___camera.html#classcs_1_1_i_camera">ICamera</a></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="group___camera.html#aa5070b0d3bdf3128c7863ae26598970b">   61</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="group___camera.html#aa5070b0d3bdf3128c7863ae26598970b">~ICamera</a>() {};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> connect() = 0;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> connect(<a class="code" href="_types_8hpp.html#struct_camera_info">CameraInfo</a> info) = 0;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> getInfo(<a class="code" href="_types_8hpp.html#struct_camera_info">CameraInfo</a> &amp;info) = 0;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> disconnect() = 0;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> getStreamInfos(<a class="code" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a> streamType, std::vector&lt;StreamInfo&gt; &amp;streamInfos) = 0;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> startStream(<a class="code" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a> streamType, <a class="code" href="_types_8hpp.html#struct_stream_info">StreamInfo</a> info, <a class="code" href="group___camera.html#gae4d6502eec55bde8acf3989c801c8765">FrameCallback</a> callback, <span class="keywordtype">void</span> *userData) = 0;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> startStream(<a class="code" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a> streamType, <a class="code" href="_types_8hpp.html#struct_stream_info">StreamInfo</a> info) = 0;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> stopStream(<a class="code" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a> streamType) = 0;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> getFrame(<a class="code" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a> streamType, <a class="code" href="group___frame.html#gaef9728e91022942cf396bbb7de90b619">IFramePtr</a> &amp;frame, <span class="keywordtype">int</span> timeout_ms = 5000) = 0;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> softTrigger(<span class="keywordtype">int</span> count = 1) = 0;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> getPropertyRange(<a class="code" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a> streamType, <a class="code" href="group___property_type.html#ga59b796677c23b170285aaed0220587e4">PROPERTY_TYPE</a> propertyType, <span class="keywordtype">float</span> &amp;min, <span class="keywordtype">float</span> &amp;max, <span class="keywordtype">float</span> &amp;step) = 0;   </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> getProperty(<a class="code" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a> streamType, <a class="code" href="group___property_type.html#ga59b796677c23b170285aaed0220587e4">PROPERTY_TYPE</a> propertyType, <span class="keywordtype">float</span> &amp;value) = 0;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> setProperty(<a class="code" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a> streamType, <a class="code" href="group___property_type.html#ga59b796677c23b170285aaed0220587e4">PROPERTY_TYPE</a> propertyType, <span class="keywordtype">float</span> value) = 0;    </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> setPropertyExtension(<a class="code" href="group___property_extension_type.html#ga7e837ea99fe20433296bf5140b06d512">PROPERTY_TYPE_EXTENSION</a> propertyType, <a class="code" href="_types_8hpp.html#union_property_extension">PropertyExtension</a> value) = 0;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> getPropertyExtension(<a class="code" href="group___property_extension_type.html#ga7e837ea99fe20433296bf5140b06d512">PROPERTY_TYPE_EXTENSION</a> propertyType, <a class="code" href="_types_8hpp.html#union_property_extension">PropertyExtension</a> &amp;value) = 0;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    </div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> getIntrinsics(<a class="code" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a> streamType, <a class="code" href="_types_8hpp.html#struct_intrinsics">Intrinsics</a> &amp;intrinsics) = 0;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> getExtrinsics(<a class="code" href="_types_8hpp.html#struct_extrinsics">Extrinsics</a> &amp;extrinsics) = 0;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    </div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> getDistort(<a class="code" href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a> streamType, <a class="code" href="_types_8hpp.html#struct_distort">Distort</a> &amp;distort) = 0;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> restart() = 0;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> setUserData(<span class="keywordtype">char</span> *userData, <span class="keywordtype">int</span> length) = 0;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a> getUserData(<span class="keywordtype">char</span> *userData, <span class="keywordtype">int</span> &amp;length) = 0;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;};</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<a class="code" href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a> ICameraPtr <a class="code" href="group___camera.html#ga24c8a4913384c5656c3ac466ed7715cf">getCameraPtr</a>();</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;}</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="namespacecs_html"><div class="ttname"><a href="namespacecs.html">cs</a></div><div class="ttdef"><b>Definition:</b> Camera.hpp:20</div></div>
+<div class="ttc" id="_types_8hpp_html_struct_intrinsics"><div class="ttname"><a href="_types_8hpp.html#struct_intrinsics">Intrinsics</a></div><div class="ttdoc">相机内参 </div><div class="ttdef"><b>Definition:</b> Types.hpp:487</div></div>
+<div class="ttc" id="group___camera_html_gae4d6502eec55bde8acf3989c801c8765"><div class="ttname"><a href="group___camera.html#gae4d6502eec55bde8acf3989c801c8765">cs::FrameCallback</a></div><div class="ttdeci">void(* FrameCallback)(IFramePtr frame, void *usrData)</div><div class="ttdoc">获得帧数据回调函数 </div><div class="ttdef"><b>Definition:</b> Camera.hpp:41</div></div>
+<div class="ttc" id="group___camera_html_ga21d13702164dc7a0eb742c1c85a55268"><div class="ttname"><a href="group___camera.html#ga21d13702164dc7a0eb742c1c85a55268">cs::ICameraPtr</a></div><div class="ttdeci">std::shared_ptr&lt; ICamera &gt; ICameraPtr</div><div class="ttdoc">相机对象的共享指针 </div><div class="ttdef"><b>Definition:</b> Camera.hpp:49</div></div>
+<div class="ttc" id="group___property_extension_type_html_ga7e837ea99fe20433296bf5140b06d512"><div class="ttname"><a href="group___property_extension_type.html#ga7e837ea99fe20433296bf5140b06d512">PROPERTY_TYPE_EXTENSION</a></div><div class="ttdeci">PROPERTY_TYPE_EXTENSION</div><div class="ttdoc">枚举: 扩展属性 </div><div class="ttdef"><b>Definition:</b> Types.hpp:356</div></div>
+<div class="ttc" id="group___camera_html_ga24c8a4913384c5656c3ac466ed7715cf"><div class="ttname"><a href="group___camera.html#ga24c8a4913384c5656c3ac466ed7715cf">cs::getCameraPtr</a></div><div class="ttdeci">CS_API ICameraPtr getCameraPtr()</div></div>
+<div class="ttc" id="_types_8hpp_html_union_property_extension"><div class="ttname"><a href="_types_8hpp.html#union_property_extension">PropertyExtension</a></div><div class="ttdoc">扩展属性值，联合体表示，设置和获取时只取指定属性对应的字段即可 </div><div class="ttdef"><b>Definition:</b> Types.hpp:392</div></div>
+<div class="ttc" id="group___frame_html_gaef9728e91022942cf396bbb7de90b619"><div class="ttname"><a href="group___frame.html#gaef9728e91022942cf396bbb7de90b619">cs::IFramePtr</a></div><div class="ttdeci">std::shared_ptr&lt; IFrame &gt; IFramePtr</div><div class="ttdef"><b>Definition:</b> Frame.hpp:33</div></div>
+<div class="ttc" id="_types_8hpp_html_struct_distort"><div class="ttname"><a href="_types_8hpp.html#struct_distort">Distort</a></div><div class="ttdoc">深度相机或RGB相机畸变参数 </div><div class="ttdef"><b>Definition:</b> Types.hpp:520</div></div>
+<div class="ttc" id="_types_8hpp_html_struct_extrinsics"><div class="ttname"><a href="_types_8hpp.html#struct_extrinsics">Extrinsics</a></div><div class="ttdoc">深度相机到RGB相机间的旋转平移信息 </div><div class="ttdef"><b>Definition:</b> Types.hpp:508</div></div>
+<div class="ttc" id="_types_8hpp_html_struct_stream_info"><div class="ttname"><a href="_types_8hpp.html#struct_stream_info">StreamInfo</a></div><div class="ttdoc">流信息组合，用于打开流时使用，可通过ICamera::getStreamInfos获得 </div><div class="ttdef"><b>Definition:</b> Types.hpp:458</div></div>
+<div class="ttc" id="_frame_8hpp_html"><div class="ttname"><a href="_frame_8hpp.html">Frame.hpp</a></div></div>
+<div class="ttc" id="group___property_type_html_ga59b796677c23b170285aaed0220587e4"><div class="ttname"><a href="group___property_type.html#ga59b796677c23b170285aaed0220587e4">PROPERTY_TYPE</a></div><div class="ttdeci">PROPERTY_TYPE</div><div class="ttdef"><b>Definition:</b> Types.hpp:156</div></div>
+<div class="ttc" id="_types_8hpp_html_struct_camera_info"><div class="ttname"><a href="_types_8hpp.html#struct_camera_info">CameraInfo</a></div><div class="ttdoc">相机信息，可通过ICamera::getInfo或ISystem::queryCameras获得 </div><div class="ttdef"><b>Definition:</b> Types.hpp:472</div></div>
+<div class="ttc" id="group___camera_html_aa5070b0d3bdf3128c7863ae26598970b"><div class="ttname"><a href="group___camera.html#aa5070b0d3bdf3128c7863ae26598970b">cs::ICamera::~ICamera</a></div><div class="ttdeci">virtual ~ICamera()</div><div class="ttdef"><b>Definition:</b> Camera.hpp:61</div></div>
+<div class="ttc" id="_types_8hpp_html_a4db9ee29f2ff83c71567c12f6bfbf28c"><div class="ttname"><a href="_types_8hpp.html#a4db9ee29f2ff83c71567c12f6bfbf28c">ERROR_CODE</a></div><div class="ttdeci">ERROR_CODE</div><div class="ttdef"><b>Definition:</b> Types.hpp:27</div></div>
+<div class="ttc" id="_a_p_i_export_8hpp_html_a79ee95a817b27aef64bf9701994be113"><div class="ttname"><a href="_a_p_i_export_8hpp.html#a79ee95a817b27aef64bf9701994be113">CS_API</a></div><div class="ttdeci">#define CS_API</div><div class="ttdef"><b>Definition:</b> APIExport.hpp:25</div></div>
+<div class="ttc" id="_types_8hpp_html_a950d7a62f48d194fd7463162541c1492"><div class="ttname"><a href="_types_8hpp.html#a950d7a62f48d194fd7463162541c1492">STREAM_TYPE</a></div><div class="ttdeci">STREAM_TYPE</div><div class="ttdef"><b>Definition:</b> Types.hpp:48</div></div>
+<div class="ttc" id="_a_p_i_export_8hpp_html"><div class="ttname"><a href="_a_p_i_export_8hpp.html">APIExport.hpp</a></div></div>
+<div class="ttc" id="group___camera_html_classcs_1_1_i_camera"><div class="ttname"><a href="group___camera.html#classcs_1_1_i_camera">cs::ICamera</a></div><div class="ttdoc">相机接口 </div><div class="ttdef"><b>Definition:</b> Camera.hpp:57</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.10
+</small></address>
+</body>
+</html>
