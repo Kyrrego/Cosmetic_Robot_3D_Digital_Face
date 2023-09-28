@@ -1,0 +1,8 @@
+prefix=/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/.private/data_record
+
+Name: data_record
+Description: Description of data_record
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

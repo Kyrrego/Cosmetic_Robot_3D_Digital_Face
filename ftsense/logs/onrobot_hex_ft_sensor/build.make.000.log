@@ -1,0 +1,6 @@
+[ 25%] [32mBuilding CXX object CMakeFiles/onrobot_hex_driver.dir/src/etherdaq_driver.cpp.o[0m
+[ 50%] [32m[1mLinking CXX shared library /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/.private/onrobot_hex_ft_sensor/lib/libonrobot_hex_driver.so[0m
+[ 50%] Built target onrobot_hex_driver
+[ 75%] [32mBuilding CXX object CMakeFiles/etherdaq_node.dir/src/etherdaq_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/.private/onrobot_hex_ft_sensor/lib/onrobot_hex_ft_sensor/etherdaq_node[0m
+[100%] Built target etherdaq_node

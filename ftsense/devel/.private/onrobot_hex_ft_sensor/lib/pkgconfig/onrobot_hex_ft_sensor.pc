@@ -1,0 +1,8 @@
+prefix=/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/.private/onrobot_hex_ft_sensor
+
+Name: onrobot_hex_ft_sensor
+Description: Description of onrobot_hex_ft_sensor
+Version: 1.0.0
+Cflags: -I/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/src/onrobot_hex_ft_sensor/include
+Libs: -L${prefix}/lib -lonrobot_hex_driver
+Requires: diagnostic_msgs diagnostic_updater geometry_msgs roscpp

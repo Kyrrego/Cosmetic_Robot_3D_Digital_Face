@@ -1,0 +1,1 @@
+/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/.private/data_record/lib/pkgconfig/data_record.pc

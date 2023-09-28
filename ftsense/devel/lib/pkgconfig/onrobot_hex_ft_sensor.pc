@@ -1,0 +1,1 @@
+/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/.private/onrobot_hex_ft_sensor/lib/pkgconfig/onrobot_hex_ft_sensor.pc

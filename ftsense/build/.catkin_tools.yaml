@@ -1,0 +1,6 @@
+devel_space: /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel
+install: false
+install_space: /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/install
+profile: default
+source_space: /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/src
+workspace: /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense
