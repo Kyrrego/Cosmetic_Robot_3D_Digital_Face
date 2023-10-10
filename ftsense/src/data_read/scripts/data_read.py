@@ -22,7 +22,7 @@ class WrenchStampedListener:
 
 
 if __name__ == "__main__":
-    rospy.init_node("data_reader")
+    rospy.init_node("data_recorder")
     listener = WrenchStampedListener()
     rospy.on_shutdown(listener.save)
     rospy.spin()
