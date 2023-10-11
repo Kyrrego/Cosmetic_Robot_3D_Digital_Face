@@ -3,7 +3,11 @@ import matplotlib.pyplot as plt
 import glob
 import os
 
-data_folder = "./data/"
+data_folder = "./data/result/pre_process/"
+result_folder = "./data/result/force_time_graph/"
+
+# 创建结果文件夹（如果不存在）
+os.makedirs(result_folder, exist_ok=True)
 
 # 获取数据文件列表
 data_files = glob.glob(os.path.join(data_folder, "*.p"))
