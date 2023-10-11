@@ -1,30 +1,44 @@
-#!/usr/bin/env python3
-
-import rospy
 import pickle
-from geometry_msgs.msg import WrenchStamped
-import time
+import matplotlib.pyplot as plt
+import glob
+import os
 
-class WrenchStampedListener:
-    def __init__(self) -> None:
-        rospy.Subscriber("/ethdaq_data", WrenchStamped, self.data_cb)
-        self.data = []
+data_folder = "./data/"
 
-    def data_cb(self, msg: WrenchStamped) -> None:
-        force = msg.wrench.force
-        self.data.append((force.x, force.y, force.z))
-        rospy.loginfo_once("getmsg")
-    
-    def save(self):
-        filename = f"/home/robo/Cosmetic_Robot_3D_Digital_Face/data/{time.time()}.p"
-        pickle.dump(self.data, open(filename, "wb"))
-        print(f"saved in file {filename}")
+# 获取数据文件列表
+data_files = glob.glob(os.path.join(data_folder, "*.p"))
 
+# 创建存储所有数据的列表
+all_data = []
 
-if __name__ == "__main__":
-    rospy.init_node("data_recorder")
-    listener = WrenchStampedListener()
-    rospy.on_shutdown(listener.save)
-    rospy.spin()
+# # 逐个读取数据文件并合并数据
+# for data_file in data_files:
+#     with open(data_file, "rb") as file:
+#         data = pickle.load(file)
+#         all_data.extend(data)
 
+with open(data_files[0], "rb") as file:
+    all_data = pickle.load(file)
 
+# 将数据分为x、y和z方向的列表
+x_data = [item[0] for item in all_data]
+y_data = [item[1] for item in all_data]
+z_data = [item[2] for item in all_data]
+
+# 创建时间序列（以秒为单位）
+time_series = list(range(len(all_data)))
+
+# 绘制x、y和z方向的力大小变化情况
+plt.figure(figsize=(10, 6))
+plt.plot(time_series, x_data, label="X Direction")
+plt.plot(time_series, y_data, label="Y Direction")
+plt.plot(time_series, z_data, label="Z Direction")
+
+# 设置图形标题和标签
+plt.title("Force Data Over Time")
+plt.xlabel("Time (s)")
+plt.ylabel("Force Magnitude")
+plt.legend()
+
+# 显示图形
+plt.show()
