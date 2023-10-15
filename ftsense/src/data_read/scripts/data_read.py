@@ -22,7 +22,7 @@ for data_file in data_files:
     z_data = [item[2] for item in data]
 
     # 创建时间序列（以秒为单位）
-    time_series = list(range(len(data)))
+    time_series = [i / 30 for i in range(len(data))]  # 将单位设置为秒
 
     # 绘制x、y和z方向的力大小变化情况
     plt.figure(figsize=(10, 6))
@@ -31,9 +31,10 @@ for data_file in data_files:
     plt.plot(time_series, z_data, label="Z Direction")
 
     # 设置图形标题和标签
-    plt.title("Force Data Over Time")
+    tag = os.path.basename(data_file).replace("_new.p", "")
+    plt.title("Force Data Over Time, Exp_ID: {}".format(tag))
     plt.xlabel("Time (s)")
-    plt.ylabel("Force Magnitude")
+    plt.ylabel("Force Magnitude (N)")
     plt.legend()
 
     # 构建结果文件名，例如：result_1.png, result_2.png, ...
