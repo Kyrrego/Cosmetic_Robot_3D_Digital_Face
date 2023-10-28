@@ -57,10 +57,10 @@ RM = /usr/local/lib/python3.8/dist-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/src/onrobot_hex_ft_sensor
+CMAKE_SOURCE_DIR = /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/src/onrobot_hex_ft_sensor
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/onrobot_hex_ft_sensor
+CMAKE_BINARY_DIR = /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/onrobot_hex_ft_sensor
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/onrobot_hex_ft_sensor/CMakeFiles /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/onrobot_hex_ft_sensor//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/onrobot_hex_ft_sensor/CMakeFiles /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/onrobot_hex_ft_sensor//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/onrobot_hex_ft_sensor/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/onrobot_hex_ft_sensor/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

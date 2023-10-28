@@ -1,7 +1,7 @@
 CMakeFiles/onrobot_hex_driver.dir/src/etherdaq_driver.cpp.o: \
- /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/src/onrobot_hex_ft_sensor/src/etherdaq_driver.cpp \
+ /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/src/onrobot_hex_ft_sensor/src/etherdaq_driver.cpp \
  /usr/include/stdc-predef.h \
- /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/src/onrobot_hex_ft_sensor/include/etherdaq_driver/etherdaq_driver.h \
+ /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/src/onrobot_hex_ft_sensor/include/etherdaq_driver/etherdaq_driver.h \
  /usr/include/boost/asio.hpp \
  /usr/include/boost/asio/associated_allocator.hpp \
  /usr/include/boost/asio/detail/config.hpp /usr/include/boost/config.hpp \

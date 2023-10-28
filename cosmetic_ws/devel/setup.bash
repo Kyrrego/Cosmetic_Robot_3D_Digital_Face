@@ -1,1 +1,1 @@
-/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/.private/catkin_tools_prebuild/setup.bash
+/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/.private/catkin_tools_prebuild/setup.bash

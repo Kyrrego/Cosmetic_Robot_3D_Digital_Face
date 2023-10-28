@@ -1,4 +1,4 @@
-prefix=/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/install
+prefix=/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/install
 
 Name: catkin_tools_prebuild
 Description: Description of catkin_tools_prebuild

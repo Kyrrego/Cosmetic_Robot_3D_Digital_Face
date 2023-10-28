@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/install")
+  set(CMAKE_INSTALL_PREFIX "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

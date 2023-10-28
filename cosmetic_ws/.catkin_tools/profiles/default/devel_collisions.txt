@@ -1,1 +1,2 @@
 /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/./cmake.lock 7
+/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/./cmake.lock 9

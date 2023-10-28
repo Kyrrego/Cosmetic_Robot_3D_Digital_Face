@@ -57,10 +57,10 @@ RM = /usr/local/lib/python3.8/dist-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/catkin_tools_prebuild
+CMAKE_SOURCE_DIR = /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/catkin_tools_prebuild
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/catkin_tools_prebuild
+CMAKE_BINARY_DIR = /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/catkin_tools_prebuild
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/catkin_tools_prebuild/CMakeFiles /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/catkin_tools_prebuild//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/catkin_tools_prebuild/CMakeFiles /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/catkin_tools_prebuild//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/catkin_tools_prebuild/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/catkin_tools_prebuild/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

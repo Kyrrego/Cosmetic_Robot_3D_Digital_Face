@@ -1,4 +1,4 @@
-prefix=/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/.private/data_record
+prefix=/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/.private/data_record
 
 Name: data_record
 Description: Description of data_record

@@ -3,8 +3,10 @@ import matplotlib.pyplot as plt
 import glob
 import os
 
-data_folder = "./data/1028/result/pre_process/"
-result_folder = "./data/1028/result/force_time_graph/"
+sub_idx = 5
+
+data_folder = "./data/1028/force_data/subject_{}/".format(sub_idx)
+result_folder = "./data/1028/result/force_time_graph/subject_{}/".format(sub_idx)
 
 # 创建结果文件夹（如果不存在）
 os.makedirs(result_folder, exist_ok=True)
@@ -37,12 +39,16 @@ for data_file in data_files:
     plt.ylabel("Force Magnitude (N)")
     plt.legend()
 
-    # 构建结果文件名，例如：result_1.png, result_2.png, ...
+    # show the plot
+    # plt.show()
+
+    # 构建结果文件名
     result_filename = os.path.join(
         result_folder, f"result_{os.path.basename(data_file)}.png")
 
     # 保存图形为PNG文件
     plt.savefig(result_filename)
+    
 
 
     # 关闭当前图形以准备下一个

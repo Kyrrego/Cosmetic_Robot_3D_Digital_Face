@@ -1,3 +1,3 @@
-Symlinking /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/lib/pkgconfig/data_record.pc
-Symlinking /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/share/data_record/cmake/data_recordConfig.cmake
-Symlinking /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/share/data_record/cmake/data_recordConfig-version.cmake
+Symlinking /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/lib/pkgconfig/data_record.pc
+Symlinking /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/share/data_record/cmake/data_recordConfig.cmake
+Symlinking /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/share/data_record/cmake/data_recordConfig-version.cmake

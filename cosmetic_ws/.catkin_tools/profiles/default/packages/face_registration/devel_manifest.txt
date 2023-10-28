@@ -1,0 +1,5 @@
+face_registration
+/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/.private/face_registration/cmake.lock /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/./cmake.lock
+/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/.private/face_registration/lib/pkgconfig/face_registration.pc /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/lib/pkgconfig/face_registration.pc
+/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/.private/face_registration/share/face_registration/cmake/face_registrationConfig-version.cmake /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/share/face_registration/cmake/face_registrationConfig-version.cmake
+/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/.private/face_registration/share/face_registration/cmake/face_registrationConfig.cmake /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/share/face_registration/cmake/face_registrationConfig.cmake

@@ -53,10 +53,10 @@ RM = /usr/local/lib/python3.8/dist-packages/cmake/data/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/src/data_record
+CMAKE_SOURCE_DIR = /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/src/data_record
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/data_record
+CMAKE_BINARY_DIR = /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/data_record
 
 # Utility rule file for clean_test_results.
 
@@ -67,7 +67,7 @@ include CMakeFiles/clean_test_results.dir/compiler_depend.make
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/data_record/test_results
+	/usr/bin/python3 /opt/ros/noetic/share/catkin/cmake/test/remove_test_results.py /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/data_record/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/data_record && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/src/data_record /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/src/data_record /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/data_record /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/data_record /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/data_record/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/data_record && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/src/data_record /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/src/data_record /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/data_record /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/data_record /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/data_record/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 

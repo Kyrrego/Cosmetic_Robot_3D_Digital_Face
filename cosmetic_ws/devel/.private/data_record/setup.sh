@@ -11,7 +11,7 @@
 
 # since this file is sourced either use the provided _CATKIN_SETUP_DIR
 # or fall back to the destination set at configure time
-: ${_CATKIN_SETUP_DIR:=/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/.private/data_record}
+: ${_CATKIN_SETUP_DIR:=/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/.private/data_record}
 _SETUP_UTIL="$_CATKIN_SETUP_DIR/_setup_util.py"
 unset _CATKIN_SETUP_DIR
 

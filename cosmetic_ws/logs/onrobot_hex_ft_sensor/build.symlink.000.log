@@ -1,5 +1,5 @@
-Symlinking /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/lib/libonrobot_hex_driver.so
-Symlinking /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/lib/pkgconfig/onrobot_hex_ft_sensor.pc
-Symlinking /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/lib/onrobot_hex_ft_sensor/etherdaq_node
-Symlinking /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/share/onrobot_hex_ft_sensor/cmake/onrobot_hex_ft_sensorConfig-version.cmake
-Symlinking /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/share/onrobot_hex_ft_sensor/cmake/onrobot_hex_ft_sensorConfig.cmake
+Symlinking /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/lib/libonrobot_hex_driver.so
+Symlinking /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/lib/pkgconfig/onrobot_hex_ft_sensor.pc
+Symlinking /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/lib/onrobot_hex_ft_sensor/etherdaq_node
+Symlinking /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/share/onrobot_hex_ft_sensor/cmake/onrobot_hex_ft_sensorConfig-version.cmake
+Symlinking /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/share/onrobot_hex_ft_sensor/cmake/onrobot_hex_ft_sensorConfig.cmake

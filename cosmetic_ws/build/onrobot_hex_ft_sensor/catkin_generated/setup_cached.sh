@@ -7,7 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/.private/onrobot_hex_ft_sensor:$CMAKE_PREFIX_PATH"
-export PWD='/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/onrobot_hex_ft_sensor'
-export ROSLISP_PACKAGE_DIRECTORIES="/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/.private/onrobot_hex_ft_sensor/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/src/onrobot_hex_ft_sensor:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/.private/onrobot_hex_ft_sensor:$CMAKE_PREFIX_PATH"
+export PWD='/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/onrobot_hex_ft_sensor'
+export ROSLISP_PACKAGE_DIRECTORIES="/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/.private/onrobot_hex_ft_sensor/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/src/onrobot_hex_ft_sensor:$ROS_PACKAGE_PATH"

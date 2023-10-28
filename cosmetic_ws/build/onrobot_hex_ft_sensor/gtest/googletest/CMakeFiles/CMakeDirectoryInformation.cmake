@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/usr/src/googletest")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/onrobot_hex_ft_sensor")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/onrobot_hex_ft_sensor")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

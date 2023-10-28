@@ -67,14 +67,14 @@ set(onrobot_hex_ft_sensor_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(onrobot_hex_ft_sensor_SOURCE_PREFIX /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/src/onrobot_hex_ft_sensor)
-  set(onrobot_hex_ft_sensor_DEVEL_PREFIX /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/.private/onrobot_hex_ft_sensor)
+  set(onrobot_hex_ft_sensor_SOURCE_PREFIX /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/src/onrobot_hex_ft_sensor)
+  set(onrobot_hex_ft_sensor_DEVEL_PREFIX /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/.private/onrobot_hex_ft_sensor)
   set(onrobot_hex_ft_sensor_INSTALL_PREFIX "")
   set(onrobot_hex_ft_sensor_PREFIX ${onrobot_hex_ft_sensor_DEVEL_PREFIX})
 else()
   set(onrobot_hex_ft_sensor_SOURCE_PREFIX "")
   set(onrobot_hex_ft_sensor_DEVEL_PREFIX "")
-  set(onrobot_hex_ft_sensor_INSTALL_PREFIX /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/install)
+  set(onrobot_hex_ft_sensor_INSTALL_PREFIX /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/install)
   set(onrobot_hex_ft_sensor_PREFIX ${onrobot_hex_ft_sensor_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(onrobot_hex_ft_sensor_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/src/onrobot_hex_ft_sensor/include " STREQUAL " ")
+if(NOT "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/src/onrobot_hex_ft_sensor/include " STREQUAL " ")
   set(onrobot_hex_ft_sensor_INCLUDE_DIRS "")
-  set(_include_dirs "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/src/onrobot_hex_ft_sensor/include")
+  set(_include_dirs "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/src/onrobot_hex_ft_sensor/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/src/onrobot_hex_ft_sen
         message(FATAL_ERROR "Project 'onrobot_hex_ft_sensor' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'onrobot_hex_ft_sensor' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/src/onrobot_hex_ft_sensor/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'onrobot_hex_ft_sensor' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/src/onrobot_hex_ft_sensor/${idir}'.  ${_report}")
     endif()
     _list_append_unique(onrobot_hex_ft_sensor_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/.private/onrobot_hex_ft_sensor/lib;/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/lib;/home/robo/cc/stretch_gazebo_workspace/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/.private/onrobot_hex_ft_sensor/lib;/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/lib;/home/robo/cc/stretch_gazebo_workspace/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

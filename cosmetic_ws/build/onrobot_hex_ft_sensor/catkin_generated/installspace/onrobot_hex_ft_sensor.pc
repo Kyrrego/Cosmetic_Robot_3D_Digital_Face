@@ -1,4 +1,4 @@
-prefix=/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/install
+prefix=/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/install
 
 Name: onrobot_hex_ft_sensor
 Description: Description of onrobot_hex_ft_sensor

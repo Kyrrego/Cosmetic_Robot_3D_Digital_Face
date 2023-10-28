@@ -1,0 +1,13 @@
+<launch>
+    <include file="$(find realsense2_camera)/launch/rs_camera.launch">
+        <arg name="device_type" value="d405" />
+        <arg name="filters" value="pointcloud" />
+        <arg name="enable_pointcloud" value="true" />
+        <arg name="enable_sync" value="true" />
+        <arg name="clip_distance" value="3" />
+    </include>
+    <!-- set depth to high accuracy mode -->
+    <rosparam>
+        /camera/stereo_module/visual_preset: 3
+    </rosparam>
+</launch>

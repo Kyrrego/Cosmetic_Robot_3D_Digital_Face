@@ -1,8 +1,8 @@
-# Install script for directory: /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/src/onrobot_hex_ft_sensor
+# Install script for directory: /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/src/onrobot_hex_ft_sensor
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/install")
+  set(CMAKE_INSTALL_PREFIX "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -54,98 +54,98 @@ endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/install/_setup_util.py")
+   "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/install" TYPE PROGRAM FILES "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/onrobot_hex_ft_sensor/catkin_generated/installspace/_setup_util.py")
+  file(INSTALL DESTINATION "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/install" TYPE PROGRAM FILES "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/onrobot_hex_ft_sensor/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/install/env.sh")
+   "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/install" TYPE PROGRAM FILES "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/onrobot_hex_ft_sensor/catkin_generated/installspace/env.sh")
+  file(INSTALL DESTINATION "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/install" TYPE PROGRAM FILES "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/onrobot_hex_ft_sensor/catkin_generated/installspace/env.sh")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/install/setup.bash;/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/install/local_setup.bash")
+   "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/install/setup.bash;/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/install/local_setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/install" TYPE FILE FILES
-    "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/onrobot_hex_ft_sensor/catkin_generated/installspace/setup.bash"
-    "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/onrobot_hex_ft_sensor/catkin_generated/installspace/local_setup.bash"
+  file(INSTALL DESTINATION "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/install" TYPE FILE FILES
+    "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/onrobot_hex_ft_sensor/catkin_generated/installspace/setup.bash"
+    "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/onrobot_hex_ft_sensor/catkin_generated/installspace/local_setup.bash"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/install/setup.sh;/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/install/local_setup.sh")
+   "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/install/setup.sh;/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/install/local_setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/install" TYPE FILE FILES
-    "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/onrobot_hex_ft_sensor/catkin_generated/installspace/setup.sh"
-    "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/onrobot_hex_ft_sensor/catkin_generated/installspace/local_setup.sh"
+  file(INSTALL DESTINATION "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/install" TYPE FILE FILES
+    "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/onrobot_hex_ft_sensor/catkin_generated/installspace/setup.sh"
+    "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/onrobot_hex_ft_sensor/catkin_generated/installspace/local_setup.sh"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/install/setup.zsh;/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/install/local_setup.zsh")
+   "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/install/setup.zsh;/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/install/local_setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/install" TYPE FILE FILES
-    "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/onrobot_hex_ft_sensor/catkin_generated/installspace/setup.zsh"
-    "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/onrobot_hex_ft_sensor/catkin_generated/installspace/local_setup.zsh"
+  file(INSTALL DESTINATION "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/install" TYPE FILE FILES
+    "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/onrobot_hex_ft_sensor/catkin_generated/installspace/setup.zsh"
+    "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/onrobot_hex_ft_sensor/catkin_generated/installspace/local_setup.zsh"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/install/.rosinstall")
+   "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/install" TYPE FILE FILES "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/onrobot_hex_ft_sensor/catkin_generated/installspace/.rosinstall")
+  file(INSTALL DESTINATION "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/install" TYPE FILE FILES "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/onrobot_hex_ft_sensor/catkin_generated/installspace/.rosinstall")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/onrobot_hex_ft_sensor/catkin_generated/installspace/onrobot_hex_ft_sensor.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/onrobot_hex_ft_sensor/catkin_generated/installspace/onrobot_hex_ft_sensor.pc")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/onrobot_hex_ft_sensor/cmake" TYPE FILE FILES
-    "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/onrobot_hex_ft_sensor/catkin_generated/installspace/onrobot_hex_ft_sensorConfig.cmake"
-    "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/onrobot_hex_ft_sensor/catkin_generated/installspace/onrobot_hex_ft_sensorConfig-version.cmake"
+    "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/onrobot_hex_ft_sensor/catkin_generated/installspace/onrobot_hex_ft_sensorConfig.cmake"
+    "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/onrobot_hex_ft_sensor/catkin_generated/installspace/onrobot_hex_ft_sensorConfig-version.cmake"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/onrobot_hex_ft_sensor" TYPE FILE FILES "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/src/onrobot_hex_ft_sensor/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/onrobot_hex_ft_sensor" TYPE FILE FILES "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/src/onrobot_hex_ft_sensor/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -155,7 +155,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libonrobot_hex_driver.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/.private/onrobot_hex_ft_sensor/lib/libonrobot_hex_driver.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/.private/onrobot_hex_ft_sensor/lib/libonrobot_hex_driver.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libonrobot_hex_driver.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libonrobot_hex_driver.so")
     file(RPATH_CHANGE
@@ -178,12 +178,12 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/onrobot_hex_ft_sensor/etherdaq_node"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/onrobot_hex_ft_sensor" TYPE EXECUTABLE FILES "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/.private/onrobot_hex_ft_sensor/lib/onrobot_hex_ft_sensor/etherdaq_node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/onrobot_hex_ft_sensor" TYPE EXECUTABLE FILES "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/.private/onrobot_hex_ft_sensor/lib/onrobot_hex_ft_sensor/etherdaq_node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/onrobot_hex_ft_sensor/etherdaq_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/onrobot_hex_ft_sensor/etherdaq_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/onrobot_hex_ft_sensor/etherdaq_node"
-         OLD_RPATH "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/.private/onrobot_hex_ft_sensor/lib:/opt/ros/noetic/lib:"
+         OLD_RPATH "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/.private/onrobot_hex_ft_sensor/lib:/opt/ros/noetic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/onrobot_hex_ft_sensor/etherdaq_node")
@@ -193,7 +193,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/onrobot_hex_ft_sensor/gtest/cmake_install.cmake")
+  include("/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/onrobot_hex_ft_sensor/gtest/cmake_install.cmake")
 
 endif()
 
@@ -205,5 +205,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/onrobot_hex_ft_sensor/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/onrobot_hex_ft_sensor/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

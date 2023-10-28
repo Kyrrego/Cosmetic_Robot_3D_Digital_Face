@@ -67,14 +67,14 @@ set(onrobot_hex_ft_sensor_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(onrobot_hex_ft_sensor_SOURCE_PREFIX /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/src/onrobot_hex_ft_sensor)
-  set(onrobot_hex_ft_sensor_DEVEL_PREFIX /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/.private/onrobot_hex_ft_sensor)
+  set(onrobot_hex_ft_sensor_SOURCE_PREFIX /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/src/onrobot_hex_ft_sensor)
+  set(onrobot_hex_ft_sensor_DEVEL_PREFIX /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/.private/onrobot_hex_ft_sensor)
   set(onrobot_hex_ft_sensor_INSTALL_PREFIX "")
   set(onrobot_hex_ft_sensor_PREFIX ${onrobot_hex_ft_sensor_DEVEL_PREFIX})
 else()
   set(onrobot_hex_ft_sensor_SOURCE_PREFIX "")
   set(onrobot_hex_ft_sensor_DEVEL_PREFIX "")
-  set(onrobot_hex_ft_sensor_INSTALL_PREFIX /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/install)
+  set(onrobot_hex_ft_sensor_INSTALL_PREFIX /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/install)
   set(onrobot_hex_ft_sensor_PREFIX ${onrobot_hex_ft_sensor_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/install/lib;/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/lib;/home/robo/cc/stretch_gazebo_workspace/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/install/lib;/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/lib;/home/robo/cc/stretch_gazebo_workspace/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

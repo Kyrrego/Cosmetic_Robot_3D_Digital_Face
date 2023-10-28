@@ -19,9 +19,9 @@ Not searching for unused variables given on the command line.
 [36m--[0m Check for working CXX compiler: /usr/bin/c++ - skipped
 [36m--[0m Detecting CXX compile features
 [36m--[0m Detecting CXX compile features - done
-[36m--[0m Using CATKIN_DEVEL_PREFIX: /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/.private/onrobot_hex_ft_sensor
-[36m--[0m Using CMAKE_PREFIX_PATH: /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel;/home/robo/cc/stretch_gazebo_workspace/devel;/opt/ros/noetic
-[36m--[0m This workspace overlays: /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel;/home/robo/cc/stretch_gazebo_workspace/devel;/opt/ros/noetic
+[36m--[0m Using CATKIN_DEVEL_PREFIX: /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/.private/onrobot_hex_ft_sensor
+[36m--[0m Using CMAKE_PREFIX_PATH: /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel;/home/robo/cc/stretch_gazebo_workspace/devel;/opt/ros/noetic
+[36m--[0m This workspace overlays: /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel;/home/robo/cc/stretch_gazebo_workspace/devel;/opt/ros/noetic
 [36m--[0m Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3")
 [36m--[0m Using PYTHON_EXECUTABLE: /usr/bin/python3
 [36m--[0m Using Debian Python package layout
@@ -29,7 +29,7 @@ Not searching for unused variables given on the command line.
 [36m--[0m Using empy: /usr/lib/python3/dist-packages/em.py
 [36m--[0m Using CATKIN_ENABLE_TESTING: ON
 [36m--[0m Call enable_testing()
-[36m--[0m Using CATKIN_TEST_RESULTS_DIR: /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/onrobot_hex_ft_sensor/test_results
+[36m--[0m Using CATKIN_TEST_RESULTS_DIR: /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/onrobot_hex_ft_sensor/test_results
 [36m--[0m Forcing gtest/gmock from source, though one was otherwise available.
 [36m--[0m Found gtest sources under '/usr/src/googletest': gtests will be built
 [36m--[0m Found gmock sources under '/usr/src/googletest': gmock will be built
@@ -63,6 +63,6 @@ Not searching for unused variables given on the command line.
 [36m--[0m catkin 0.8.10
 [36m--[0m BUILD_SHARED_LIBS is on
 [36m--[0m Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found version "1.71.0") found components: system thread program_options
-[36m--[0m Configuring done (0.7s)
+[36m--[0m Configuring done (0.6s)
 [36m--[0m Generating done (0.0s)
-[36m--[0m Build files have been written to: /home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/build/onrobot_hex_ft_sensor
+[36m--[0m Build files have been written to: /home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/build/onrobot_hex_ft_sensor

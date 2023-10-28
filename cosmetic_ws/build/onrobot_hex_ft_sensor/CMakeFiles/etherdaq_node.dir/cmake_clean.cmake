@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/.private/onrobot_hex_ft_sensor/lib/onrobot_hex_ft_sensor/etherdaq_node"
-  "/home/robo/Cosmetic_Robot_3D_Digital_Face/ftsense/devel/.private/onrobot_hex_ft_sensor/lib/onrobot_hex_ft_sensor/etherdaq_node.pdb"
+  "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/.private/onrobot_hex_ft_sensor/lib/onrobot_hex_ft_sensor/etherdaq_node"
+  "/home/robo/Cosmetic_Robot_3D_Digital_Face/cosmetic_ws/devel/.private/onrobot_hex_ft_sensor/lib/onrobot_hex_ft_sensor/etherdaq_node.pdb"
   "CMakeFiles/etherdaq_node.dir/src/etherdaq_node.cpp.o"
   "CMakeFiles/etherdaq_node.dir/src/etherdaq_node.cpp.o.d"
 )
