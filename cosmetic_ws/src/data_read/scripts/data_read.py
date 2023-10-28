@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import glob
 import os
 
-sub_idx = 5
+sub_idx = 1
 
 data_folder = "./data/1028/force_data/subject_{}/".format(sub_idx)
 result_folder = "./data/1028/result/force_time_graph/subject_{}/".format(sub_idx)
@@ -24,7 +24,7 @@ for data_file in data_files:
     z_data = [item[2] for item in data]
 
     # 创建时间序列（以秒为单位）
-    time_series = [i / 30 for i in range(len(data))]  # 将单位设置为秒
+    time_series = [i / 100 for i in range(len(data))]  # 将单位设置为秒
 
     # 绘制x、y和z方向的力大小变化情况
     plt.figure(figsize=(10, 6))
