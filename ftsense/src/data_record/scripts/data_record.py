@@ -16,7 +16,7 @@ class WrenchStampedListener:
         rospy.loginfo_once("getmsg")
     
     def save(self):
-        filename = f"/home/robo/Cosmetic_Robot_3D_Digital_Face/data/{time.time()}.p"
+        filename = f"/home/robo/Cosmetic_Robot_3D_Digital_Face/data/1028/force_data/{time.time()}.p"
         pickle.dump(self.data, open(filename, "wb"))
         print(f"saved in file {filename}")
 

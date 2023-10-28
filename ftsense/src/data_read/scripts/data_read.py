@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 import glob
 import os
 
-data_folder = "./data/result/pre_process/"
-result_folder = "./data/result/force_time_graph/"
+data_folder = "./data/1028/result/pre_process/"
+result_folder = "./data/1028/result/force_time_graph/"
 
 # 创建结果文件夹（如果不存在）
 os.makedirs(result_folder, exist_ok=True)
@@ -43,6 +43,7 @@ for data_file in data_files:
 
     # 保存图形为PNG文件
     plt.savefig(result_filename)
+
 
     # 关闭当前图形以准备下一个
     plt.close()
