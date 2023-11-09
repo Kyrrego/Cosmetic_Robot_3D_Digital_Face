@@ -32,19 +32,17 @@ for data_file in data_files:
 
     # 设置图形标题和标签
     tag = os.path.basename(data_file).replace("_new.p", "")
-    plt.title("Force Data Over Time, Exp_ID: {}".format(tag))
+    plt.title(f"Force Data Over Time, Exp_ID: {tag}")
     plt.xlabel("Time (s)")
     plt.ylabel("Force Magnitude (N)")
     plt.legend()
 
-
     # 构建结果文件名
-    result_filename = os.path.join(
-        result_folder, f"result_one_{os.path.basename(data_file)}.pdf")
+    result_filename = os.path.join(result_folder, f"result_one_{os.path.basename(data_file)}.pdf")
 
     # 保存图形为PNG文件
     plt.savefig(result_filename)
-    
+
     # show the plot
     plt.show()
 
