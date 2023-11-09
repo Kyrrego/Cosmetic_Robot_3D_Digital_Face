@@ -23,6 +23,8 @@ def plot_data(result_folder, data_file):
 
     # zeroing the data using the first 100 samples
     data_np -= np.mean(data_np[:100], axis=0)
+    # revert the data of z axis
+    data_np[:, 2] *= -1
 
     # Low Pass Filter
     b, a = butter(order, Wn, "lowpass", fs=fs)
@@ -41,6 +43,18 @@ def plot_data(result_folder, data_file):
     # Assuming the Z axis data is the third column in data_filt
     z_force = data_filt[:, 2]
 
+    # Identify the start and end of each injection
+    above_threshold = z_force > 1
+    starts = np.where(np.diff(above_threshold.astype(int)) > 0)[0]
+    ends = np.where(np.diff(above_threshold.astype(int)) < 0)[0]
+
+    # Combine starts and ends into a list of tuples
+    injections = list(zip(starts, ends))
+    print("Injections:", injections)
+
+    for start, end in injections:
+        plt.axvspan(time_series[start], time_series[end], facecolor="gray", alpha=0.1)
+
     # 设置图形标题和标签
     tag = os.path.basename(data_file).replace(".p", "")
     plt.title(f"Force Data Over Time, Exp_ID: {tag}")
@@ -52,7 +66,7 @@ def plot_data(result_folder, data_file):
     # plt.show()
 
     # 构建结果文件名
-    result_filename = os.path.join(result_folder, f"result_{os.path.basename(data_file)}new.pdf")
+    result_filename = os.path.join(result_folder, f"result_{os.path.basename(data_file)}.pdf")
 
     # 保存图形为PNG文件
     plt.savefig(result_filename)
@@ -73,7 +87,5 @@ for sub_idx in range(1, 13):
 
     for data_file in data_files:
         plot_data(result_folder, data_file)
-        break
 
     print(f"图像已保存在{result_folder}文件夹中。")
-    break
